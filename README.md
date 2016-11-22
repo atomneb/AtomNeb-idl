@@ -1,4 +1,4 @@
-## AtomNeb
+## AtomNeb (IDL version)
 [![GitHub license](https://img.shields.io/aur/license/yaourt.svg)](https://github.com/equib/AtomNeb/blob/master/LICENSE)
 
 **Atomic Data for Ionized Nebulae**
