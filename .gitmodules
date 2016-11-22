@@ -1,0 +1,6 @@
+[submodule "externals/astron"]
+	path = externals/astron
+	url = git://github.com/wlandsman/IDLAstro.git
+[submodule "externals/coyote"]
+	path = externals/coyote
+	url = git://github.com/idl-coyote/coyote.git
