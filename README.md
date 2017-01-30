@@ -10,15 +10,15 @@ The **AtomNeb** database contains sets of [atomic datasets](https://github.com/e
 
 The atomic datasets are as follows:
 
-* **[Collection](https://github.com/equib/AtomNeb/tree/master/atomic-data/collection)** from the [National Institute of Standards and Technology (NIST) Atomic Spectra Database](https://www.nist.gov/pml/atomic-spectra-database), the [CHIANTI atomic database](http://www.chiantidatabase.org/), and some improved atomic data from Cloudy v13.04 and pyNeb v1.0.
+* **[Collection](https://github.com/atomneb/AtomNeb-idl/tree/master/atomic-data/collection)** from the [National Institute of Standards and Technology (NIST) Atomic Spectra Database](https://www.nist.gov/pml/atomic-spectra-database), the [CHIANTI atomic database](http://www.chiantidatabase.org/), and some improved atomic data from Cloudy v13.04 and pyNeb v1.0.
 
-* **[Chianti52](https://github.com/equib/AtomNeb/tree/master/atomic-data/chianti52)** from the [CHIANTI atomic database](http://www.chiantidatabase.org/) version 5.2.
+* **[Chianti52](https://github.com/atomneb/AtomNeb-idl/tree/master/atomic-data/chianti52)** from the [CHIANTI atomic database](http://www.chiantidatabase.org/) version 5.2.
 
-* **[Chianti60](https://github.com/equib/AtomNeb/tree/master/atomic-data/chianti60)** from the [CHIANTI atomic database](http://www.chiantidatabase.org/) version 6.0.
+* **[Chianti60](https://github.com/atomneb/AtomNeb-idl/tree/master/atomic-data/chianti60)** from the [CHIANTI atomic database](http://www.chiantidatabase.org/) version 6.0.
 
-* **[Chianti70](https://github.com/equib/AtomNeb/tree/master/atomic-data/chianti70)** from the [CHIANTI atomic database](http://www.chiantidatabase.org/) version 7.0.
+* **[Chianti70](https://github.com/atomneb/AtomNeb-idl/tree/master/atomic-data/chianti70)** from the [CHIANTI atomic database](http://www.chiantidatabase.org/) version 7.0.
 
-Each dataset contains the following [atomic data FITS files](https://github.com/equib/AtomNeb/tree/master/atomic-data/chianti70):
+Each dataset contains the following [atomic data FITS files](https://github.com/atomneb/AtomNeb-idl/tree/master/atomic-data/chianti70):
 
 * **AtomElj.fits** contains *Energy Levels* (Ej).
 
