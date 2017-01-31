@@ -26,7 +26,7 @@ Each dataset contains the following [atomic data FITS files](https://github.com/
 
 * **AtomAij.fits** contains *Transition Probabilities* (Aij).
 
-The **AtomNeb** database for ***recombination lines*** contains sets of [recombination coefficients] (https://github.com/atomneb/AtomNeb-idl/tree/master/atomic-data-rc), which were generated for use in [proEQUIB](https://github.com/equib/proEQUIB), [pyEQUIB](https://github.com/equib/pyEQUIB), and other nebular spectral analysis tools. They include effective recombination coefficient (Aeff) of recombination lines of H I, He I, He II, C I, C II, C III, C VI, N II, N III, N IV, N V, N VI, N VII, O II, O III, O IV, O V, O VI, O VIII, and Ne II ions typically observed in ionized nebulae, as well as Branching ratios (Br) of O II and N II lines 
+The **AtomNeb** database for ***recombination lines*** contains sets of [recombination coefficients] (https://github.com/atomneb/AtomNeb-idl/tree/master/atomic-data-rc), which were generated for use in [proEQUIB](https://github.com/equib/proEQUIB), [pyEQUIB](https://github.com/equib/pyEQUIB), and other nebular spectral analysis tools. They include effective recombination coefficient (αeff) of recombination lines of H I, He I, He II, C I, C II, C III, C VI, N II, N III, N IV, N V, N VI, N VII, O II, O III, O IV, O V, O VI, O VIII, and Ne II ions typically observed in ionized nebulae, as well as Branching ratios (Br) of O II and N II lines.
 
 The atomic datasets for recombination lines are as follows:
 
