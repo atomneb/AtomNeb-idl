@@ -4,7 +4,7 @@
 ; Use Atomic Data Collection from Storey and Hummer (1995) 1995MNRAS.272...41S
 
 ; Update paths!
-Atom_RC_file='/export/adanehka/home/idllib/AtomNeb/atomic-data-rc/rc_SH95.fits'
+Atom_RC_file='/home/atomic_data/atomneb/atomic-data-rc/rc_SH95.fits'
 
 atom='h'
 ion='ii' ; H I
