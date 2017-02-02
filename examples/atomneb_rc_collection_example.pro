@@ -7,7 +7,7 @@
 ; and Ne II ions (Kisielius et al. 1998 1998A&AS..133..257K)
 
 ; Update paths!
-Atom_RC_file='/export/adanehka/home/idllib/AtomNeb/atomic-data-rc/rc_collection.fits'
+Atom_RC_file='/home/atomic_data/atomneb/atomic-data-rc/rc_collection.fits'
 
 atom='c'
 ion='iii' ; C II
