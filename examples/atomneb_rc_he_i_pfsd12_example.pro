@@ -5,7 +5,7 @@
 ; 2012MNRAS.425L..28P and 2013MNRAS.433L..89P
 
 ; Update paths!
-Atom_RC_file='/export/adanehka/home/idllib/AtomNeb/atomic-data-rc/rc_he_ii_PFSD12.fits'
+Atom_RC_file='/home/atomic_data/atomneb/atomic-data-rc/rc_he_ii_PFSD12.fits'
 
 atom='he'
 ion='ii' ; He I
