@@ -6,7 +6,7 @@
 ; Cloudy v13.04 and pyNeb v1.0
 
 ; Update paths!
-Atom_RC_file='/export/adanehka/home/idllib/AtomNeb/atomic-data-rc/rc_PPB91.fits'
+Atom_RC_file='/home/atomic_data/atomneb/atomic-data-rc/rc_PPB91.fits'
 
 atom='c'
 ion='iii' ; C II
