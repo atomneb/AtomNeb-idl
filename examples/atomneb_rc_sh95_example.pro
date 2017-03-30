@@ -29,9 +29,9 @@ print,list_hi_aeff_reference
 
 atom='h'
 ion='ii' ; H I
-; get citations for Collision Strengths (Omegaij) of H I
+; get citations for Recombination Coefficients (Aeff) of H I
 citation=atomneb_get_aeff_sh95_reference_citation(Atom_RC_file, atom, ion)
-; print citations for Collision Strengths (Omegaij) of H I
+; print citations for Recombination Coefficients (Aeff) of H I
 print,citation
 
 end
