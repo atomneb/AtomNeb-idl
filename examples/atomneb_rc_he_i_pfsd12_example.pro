@@ -12,7 +12,7 @@ ion='ii' ; He I
 ; read Recombination Coefficients (Aeff) of He I
 hei_rc_data=atomneb_read_aeff_he_i_pfsd12(Atom_RC_file, atom, ion)
 hei_rc_data_wave=atomneb_read_aeff_he_i_pfsd12(Atom_RC_file, atom, ion, /wavelength)
-; print information needed for Recombination Coefficients (Aeff) of C II
+; print information needed for Recombination Coefficients (Aeff) of He I
 print,hei_rc_data[0].Aeff
 temp=size(hei_rc_data_wave.Wavelength,/DIMENSIONS)
 n_line=temp[0]
@@ -22,14 +22,14 @@ atom='he'
 ion='ii' ; He I
 ; list all Recombination Coefficients (Aeff) data for He I
 list_hei_aeff_data=atomneb_search_aeff_he_i_pfsd12(Atom_RC_file, atom, ion)
-; print all Recombination Coefficients (Aeff) of C II
+; print all Recombination Coefficients (Aeff) of He I
 print,list_hei_aeff_data
 
 atom='he'
 ion='ii' ; He I
-; list all Recombination Coefficients (Aeff) references for C II
+; list all Recombination Coefficients (Aeff) references for He I
 list_hei_aeff_reference=atomneb_list_aeff_he_i_pfsd12_references(Atom_RC_file, atom, ion)
-; print all Recombination Coefficients (Aeff) References for C II
+; print all Recombination Coefficients (Aeff) References for He I
 print,list_hei_aeff_reference
 
 atom='he'
