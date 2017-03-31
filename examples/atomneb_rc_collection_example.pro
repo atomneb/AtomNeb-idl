@@ -7,7 +7,7 @@
 ; and Ne II ions (Kisielius et al. 1998 1998A&AS..133..257K)
 
 ; Update paths!
-Atom_RC_file='/home/atomic_data/atomneb/atomic-data-rc/rc_collection.fits'
+Atom_RC_file='/export/adanehka/home/idllib/AtomNeb/atomic-data-rc/rc_collection.fits'
 
 atom='c'
 ion='iii' ; C II
@@ -57,35 +57,35 @@ for i=0,n_line-1 do print,oii_rc_data_br[i].Wavelength, $
                         oii_rc_data_br[i].Mult1,oii_rc_data_br[i].LowerTerm,oii_rc_data_br[i].UpperTerm
                           
 atom='ne'
-ion='iii' ; C II
+ion='iii' ; Ne II
 ; read Recombination Coefficients (Aeff) of Ne II
 neii_rc_data=atomneb_read_aeff_collection(Atom_RC_file, atom, ion)
 temp=size(neii_rc_data.Wavelength,/DIMENSIONS)
 n_line=temp[0]
-; print information needed for Recombination Coefficients (Aeff) of C II
+; print information needed for Recombination Coefficients (Aeff) of Ne II
 for i=0,n_line-1 do print,neii_rc_data[i].Wavelength, neii_rc_data[i].a, $
                           neii_rc_data[i].b, neii_rc_data[i].c, $
                           neii_rc_data[i].d, neii_rc_data[i].f, neii_rc_data[i].br
                                                 
 atom='c'
-ion='iii'
-; list all Recombination Coefficients (Aeff) data for C II
+ion='iii' ; C III
+; list all Recombination Coefficients (Aeff) data for C III
 list_cii_aeff_data=atomneb_search_aeff_collection(Atom_RC_file, atom, ion)
-; print all Recombination Coefficients (Aeff) of C II
+; print all Recombination Coefficients (Aeff) of C III
 print,list_cii_aeff_data
 
 atom='c'
-ion='iii'
-; list all Recombination Coefficients (Aeff) references for C II
+ion='iii' ; C III
+; list all Recombination Coefficients (Aeff) references for C III
 list_cii_aeff_reference=atomneb_list_aeff_collection_references(Atom_RC_file, atom, ion)
-; print all Recombination Coefficients (Aeff) References for C II
+; print all Recombination Coefficients (Aeff) References for C III
 print,list_cii_aeff_reference
 
 atom='c'
-ion='iii'
-; get citations for Collision Strengths (Omegaij) of O III with reference SSB14
+ion='iii' ; C III
+; get citations for Recombination Coefficients (Aeff) of C III with reference SSB14
 citation=atomneb_get_aeff_collection_reference_citation(Atom_RC_file, atom, ion)
-; print citations for Collision Strengths (Omegaij) of O III with reference SSB14
+; print citations for Recombination Coefficients (Aeff) of C III with reference SSB14
 print,citation
 
 end
