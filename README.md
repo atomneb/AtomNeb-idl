@@ -1,5 +1,5 @@
 ## AtomNeb (IDL version)
-[![GitHub license](https://img.shields.io/aur/license/yaourt.svg)](https://github.com/atomneb/AtomNeb-idl/tree/master/atomic-data-rc/blob/master/LICENSE)
+[![GitHub license](https://img.shields.io/aur/license/yaourt.svg)](https://github.com/atomneb/AtomNeb-idl/blob/master/LICENSE)
 
 **Atomic Data for Ionized Nebulae**
 
