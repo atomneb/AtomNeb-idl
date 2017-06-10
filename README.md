@@ -39,4 +39,4 @@ The atomic datasets for recombination lines are as follows:
 * **[PFSD12 He I data](https://github.com/atomneb/AtomNeb-idl/tree/master/atomic-data-rc)**, effective He I recombination coefficients from [Porter et al (2012)](
 http://adsabs.harvard.edu/abs/2012MNRAS.425L..28P) and [(2013)](http://adsabs.harvard.edu/abs/2013MNRAS.433L..89P).
 
-Website: [physics.mq.edu.au/~ashkbiz/atomneb](http://physics.mq.edu.au/~ashkbiz/atomneb/)
+Website: [physics.mq.edu.au/~ashkbiz/atomneb](https://physics.mq.edu.au/~ashkbiz/atomneb/)
