@@ -17,4 +17,4 @@ http://adsabs.harvard.edu/abs/2012MNRAS.425L..28P) and [(2013)](http://adsabs.ha
 http://adsabs.harvard.edu/abs/2011A%26A...530A..18F) and [(2013)](http://adsabs.harvard.edu/abs/2013A%26A...550C...2F).
 
 * **rc_o_iii_SSB17.fits**, effective O II recombination coefficients from [Storey, Sochi and Bastin (2017)](
-http://adsabs.harvard.edu/abs/2017MNRAS.470..379S).
+http://adsabs.harvard.edu/abs/2017MNRAS.470..379S). (Use these commends: cat rc_o_iii_SSB17.fits.tar.gz.parta* >rc_o_iii_SSB17.fits.tar.gz; tar -xvf rc_o_iii_SSB17.fits.tar.gz)
