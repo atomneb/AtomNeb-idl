@@ -31,7 +31,7 @@ function atomneb_read_aij, Atom_Aij_file, atom, ion, reference=reference, level_
 ;-   
   element_data_list=atomneb_read_aij_list(Atom_Aij_file)
   if keyword_set(reference) eq 1 then begin
-    atom_ion_name=strlowcase(atom)+'_'+strlowcase(ion)+'_aij_'+strupcase(reference)
+    atom_ion_name=strlowcase(atom)+'_'+strlowcase(ion)+'_aij_'+reference
     ii=where(element_data_list.Aij_Data eq atom_ion_name);
     if ii eq -1 then begin
       print, 'could not find the given element or ion'

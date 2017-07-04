@@ -35,7 +35,7 @@ function atomneb_read_omij, Atom_Omij_file, atom, ion, reference=reference, leve
 ;-  
   element_data_list=atomneb_read_omij_list(Atom_Omij_file)
   if keyword_set(reference) eq 1 then begin
-    atom_ion_name=strlowcase(atom)+'_'+strlowcase(ion)+'_omij_'+strupcase(reference)
+    atom_ion_name=strlowcase(atom)+'_'+strlowcase(ion)+'_omij_'+reference
     ii=where(element_data_list.Omij_Data eq atom_ion_name);
     if ii eq -1 then begin
       print, 'could not find the given element or ion'
