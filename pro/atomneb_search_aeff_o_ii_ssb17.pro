@@ -39,7 +39,7 @@ function atomneb_search_aeff_o_ii_ssb17, Atom_RC_file, atom, ion, case1, wavelen
   endif else begin
      if ii_length gt 1 then begin
        ii_min=min(abs(element_data_list[ii].wavelength-wavelength))
-       ii=where(abs(element_data_list.wavelength-wavelength) eq ii_min) 
+       ii=where(abs(element_data_list.wavelength-wavelength) eq ii_min and element_data_list.case1 eq case1) 
        temp=size(ii,/DIMENSIONS)
        ii_length=temp[0]
      endif
