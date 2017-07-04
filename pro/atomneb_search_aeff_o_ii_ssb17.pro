@@ -1,4 +1,4 @@
-function atomneb_search_aeff_o_ii_ssb17, Atom_RC_file, atom, ion, wavelength
+function atomneb_search_aeff_o_ii_ssb17, Atom_RC_file, atom, ion, case1, wavelength
 ;+
 ; NAME:
 ;     atomneb_search_aeff_o_ii_ssb17
@@ -28,8 +28,7 @@ function atomneb_search_aeff_o_ii_ssb17, Atom_RC_file, atom, ion, wavelength
 ;- 
   element_data_list=atomneb_read_aeff_o_ii_ssb17_list(Atom_RC_file)
   
-  ii=where(element_data_list.wavelength eq wavelength)
-  
+  ii=where(abs(element_data_list.wavelength-wavelength) le 0.02 and element_data_list.case1 eq case1) 
   temp=size(ii,/DIMENSIONS)
   ii_length=temp[0]
   if ii_length eq 1 then begin
@@ -37,7 +36,14 @@ function atomneb_search_aeff_o_ii_ssb17, Atom_RC_file, atom, ion, wavelength
       print, 'could not find the given wavelength'
       exit
     endif
-  endif
+  endif else begin
+     if ii_length gt 1 then begin
+       ii_min=min(abs(element_data_list[ii].wavelength-wavelength))
+       ii=where(abs(element_data_list.wavelength-wavelength) eq ii_min) 
+       temp=size(ii,/DIMENSIONS)
+       ii_length=temp[0]
+     endif
+  endelse
   Extention1=element_data_list[ii].Extention
   Wavelength1=element_data_list[ii].wavelength
   

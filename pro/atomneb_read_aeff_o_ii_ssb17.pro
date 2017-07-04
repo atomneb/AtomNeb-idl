@@ -1,4 +1,4 @@
-function atomneb_read_aeff_o_ii_ssb17, Atom_RC_file, atom, ion, wavelength_range, wavelength=wavelength, reference=reference
+function atomneb_read_aeff_o_ii_ssb17, Atom_RC_file, atom, ion, case1, wavelength_range, wavelength=wavelength, reference=reference
 ;+
 ; NAME:
 ;     atomneb_read_aeff_o_ii_ssb17
@@ -29,7 +29,7 @@ function atomneb_read_aeff_o_ii_ssb17, Atom_RC_file, atom, ion, wavelength_range
   element_data_list=atomneb_read_aeff_o_ii_ssb17_list(Atom_RC_file)
   wave_min=min(wavelength_range)
   wave_max=max(wavelength_range)
-  wave_loc1=where (element_data_list.wavelength ge wave_min and element_data_list.wavelength le wave_max)
+  wave_loc1=where (element_data_list.wavelength ge wave_min and element_data_list.wavelength le wave_max and element_data_list.case1 eq case1)
   temp=size(wave_loc1,/DIMENSIONS) 
   if temp[0] lt 0 then return, 0
   wave_size=temp[0]

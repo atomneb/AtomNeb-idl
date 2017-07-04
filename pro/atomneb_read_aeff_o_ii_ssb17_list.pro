@@ -15,7 +15,7 @@ function atomneb_read_aeff_o_ii_ssb17_list, Atom_RC_file
 ; RETURN:  aeff_data_list
 ;          {Aeff_Data:'',  Extention:0, $
 ;           IND:long(0), Wavelength: float(0.0), $
-;           Tr:'',  Trans: '', T_X: ''}
+;           Case1:'',  lower_term: '', upper_term: ''}
 ;
 ; REQUIRED EXTERNAL LIBRARY:
 ;     ftab_ext from IDL Astronomy User's library (../externals/astron/pro)
@@ -25,9 +25,9 @@ function atomneb_read_aeff_o_ii_ssb17_list, Atom_RC_file
 ;- 
   
   element_template={Aeff_Data:'',  Extention:0, $
-              IND:long(0), Wavelength: float(0.0), lower_term:'', upper_term:''}
+              IND:long(0), Wavelength: float(0.0), Case1: '', lower_term:'', upper_term:''}
                                   
-  ftab_ext,Atom_RC_file,[1,2,3,4,5,6],Aeff_Data,Extention,IND,Wavelength,lower_term,upper_term,EXTEN_NO =1
+  ftab_ext,Atom_RC_file,[1,2,3,4,5,6,7],Aeff_Data,Extention,IND,Wavelength,Case1,lower_term,upper_term,EXTEN_NO =1
   temp=size(Aeff_Data,/DIMENSIONS)
   element_length=temp[0]
   
@@ -37,6 +37,7 @@ function atomneb_read_aeff_o_ii_ssb17_list, Atom_RC_file
      element_data[i].Extention=Extention[i]
      element_data[i].IND=IND[i]
      element_data[i].Wavelength=Wavelength[i]
+     element_data[i].Case1=strtrim(Case1[i],2)
      element_data[i].lower_term=strtrim(lower_term[i],2)
      element_data[i].upper_term=strtrim(upper_term[i],2)
   endfor
