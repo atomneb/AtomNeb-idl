@@ -12,3 +12,9 @@ The recombination coefficient atomic data were generated for use in [proEQUIB](h
 
 * **rc_he_ii_PFSD12.fits**, effective He I recombination coefficients from [Porter et al (2012)](
 http://adsabs.harvard.edu/abs/2012MNRAS.425L..28P) and [(2013)](http://adsabs.harvard.edu/abs/2013MNRAS.433L..89P).
+
+* **rc_n_iii_FSL13.fits**, effective N II recombination coefficients from [Fang, Storey and Liu (2011)](
+http://adsabs.harvard.edu/abs/2011A%26A...530A..18F) and [(2013)](http://adsabs.harvard.edu/abs/2013A%26A...550C...2F).
+
+* **rc_o_iii_SSB17.fits**, effective O II recombination coefficients from [Storey, Sochi and Bastin (2017)](
+http://adsabs.harvard.edu/abs/2017MNRAS.470..379S).
