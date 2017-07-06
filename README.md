@@ -42,7 +42,7 @@ http://adsabs.harvard.edu/abs/2012MNRAS.425L..28P) and [(2013)](http://adsabs.ha
 * **[FSL13 N II data](https://github.com/atomneb/AtomNeb-idl/tree/master/atomic-data-rc)**, effective N II recombination coefficients (corrigendum) from [Fang, Storey and Liu (2011)](
 http://adsabs.harvard.edu/abs/2011A%26A...530A..18F) and [(2013)](http://adsabs.harvard.edu/abs/2013A%26A...550C...2F).
 
-* **[SSB17 O II data](https://github.com/atomneb/AtomNeb-idl/tree/master/atomic-data-rc)**, effective O II recombination coefficients from [Storey, Sochi and Bastin (2017)](
+* **[SSB17 O II data](https://github.com/atomneb/AtomNeb-idl/tree/master/atomic-data-rc)**, effective O II recombination coefficients of 8889 recombination lines for Cases A, B, and C, and 2433 optical (3500-9000Å) recombination lines for Case B from [Storey, Sochi and Bastin (2017)](
 http://adsabs.harvard.edu/abs/2017MNRAS.470..379S).
 
 Website: [physics.mq.edu.au/~ashkbiz/atomneb](https://physics.mq.edu.au/~ashkbiz/atomneb/)
