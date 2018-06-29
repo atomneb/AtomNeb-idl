@@ -1,5 +1,5 @@
 ---
-title: 'AtomNeb: Atomic Data of Ionized Nebulae'
+title: 'AtomNeb: Atomic Data for Ionized Nebulae'
 tags:
   - IDL
   - atomic data
