@@ -31,7 +31,7 @@ _recombination lines_ using recombination coefficients of ions. Hence, the
 atomic data for both the collisional excitation and recombination process are 
 important to determine physical conditions and elemental abundances of ionized 
 nebulae from collisionally excited lines and recombination 
-lines [see e.g. @Danehkar:2013; @Danehkar:2014; @Danehkar:2016; @Danehkar:2018].
+lines [see e.g. @Danehkar:2013; @Danehkar:2014; @Danehkar:2014b; @Danehkar:2016; @Danehkar:2018].
 Moreover, atomic data are essential for calculations of level populations and line emissivities 
 in photoionization codes [e.g. @Ferland:1998; @Kallman:2001; @Ercolano:2003; @Ercolano:2005]. 
 
