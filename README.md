@@ -46,3 +46,8 @@ http://adsabs.harvard.edu/abs/2011A%26A...530A..18F) and [(2013)](http://adsabs.
 http://adsabs.harvard.edu/abs/2017MNRAS.470..379S).
 
 Website: [physics.mq.edu.au/~ashkbiz/atomneb](https://physics.mq.edu.au/~ashkbiz/atomneb/)
+
+### Installation
+To install the **AtomNeb** database and its API library, simply add the path of this package directory to your IDL path. 
+This package requires IDL version 7.1 or later. For more information about the path management in IDL, read [the tips for customizing IDL program path](https://www.harrisgeospatial.com/Support/Self-Help-Tools/Help-Articles/Help-Articles-Detail/ArtMID/10220/ArticleID/16156/Quick-tips-for-customizing-your-IDL-program-search-path)
+provided by Harris Geospatial Solutions or [the IDL library installation note](http://www.idlcoyote.com/code_tips/installcoyote.php) by David Fanning in the Coyote IDL Library. 
