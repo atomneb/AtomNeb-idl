@@ -5,10 +5,10 @@
 
 ; Locate datasets
 base_dir = file_dirname(file_dirname((routine_info('$MAIN$', /source)).path))
-examples = ['atomic-data', 'chianti60']
-Atom_Elj_file = filepath('AtomElj.fits', root_dir=base_dir, subdir=examples)
-Atom_Omij_file = filepath('AtomOmij.fits', root_dir=base_dir, subdir=examples)
-Atom_Aij_file = filepath('AtomAij.fits', root_dir=base_dir, subdir=examples)
+data_dir = ['atomic-data', 'chianti60']
+Atom_Elj_file = filepath('AtomElj.fits', root_dir=base_dir, subdir=data_dir )
+Atom_Omij_file = filepath('AtomOmij.fits', root_dir=base_dir, subdir=data_dir )
+Atom_Aij_file = filepath('AtomAij.fits', root_dir=base_dir, subdir=data_dir )
 
 ; read Energy Levels (Ej) list
 elj_data_list=atomneb_read_elj_list(Atom_Elj_file)

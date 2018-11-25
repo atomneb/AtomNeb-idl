@@ -4,8 +4,10 @@
 ; Use Atomic Data Collection from Porter et al (2012) and (2013)
 ; 2012MNRAS.425L..28P and 2013MNRAS.433L..89P
 
-; Update paths!
-Atom_RC_file='/home/atomic_data/atomneb/atomic-data-rc/rc_he_ii_PFSD12.fits'
+; Locate datasets
+base_dir = file_dirname(file_dirname((routine_info('$MAIN$', /source)).path))
+data_dir = ['atomic-data-rc']
+Atom_RC_file= filepath('rc_he_ii_PFSD12.fits', root_dir=base_dir, subdir=data_dir )
 
 atom='he'
 ion='ii' ; He I

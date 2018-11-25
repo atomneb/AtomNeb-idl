@@ -4,8 +4,10 @@
 ; Use Atomic Data Collection from Fang, Storey and Liu (2011) and (2013)
 ; 2011A&A...530A..18F and 2013A&A...550C...2F
 
-; Update paths!
-Atom_RC_file='/export/adanehka/home/idllib/AtomNeb/atomic-data-rc/rc_n_iii_FSL13.fits'
+; Locate datasets
+base_dir = file_dirname(file_dirname((routine_info('$MAIN$', /source)).path))
+data_dir = ['atomic-data-rc']
+Atom_RC_file= filepath('rc_n_iii_FSL13.fits', root_dir=base_dir, subdir=data_dir )
 
 atom='n'
 ion='iii' ; N II

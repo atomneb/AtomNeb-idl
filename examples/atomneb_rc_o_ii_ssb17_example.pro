@@ -4,8 +4,10 @@
 ; Use Atomic Data Collection from Storey, Sochi and Bastin (2017)
 ; 2017MNRAS.470..379S
 
-; Update paths!
-Atom_RC_file='/export/adanehka/home/idllib/AtomNeb/atomic-data-rc/rc_o_iii_SSB17.fits'
+; Locate datasets
+base_dir = file_dirname(file_dirname((routine_info('$MAIN$', /source)).path))
+data_dir = ['atomic-data-rc']
+Atom_RC_file= filepath('rc_o_iii_SSB17.fits', root_dir=base_dir, subdir=data_dir )
 
 atom='o'
 ion='iii' ; O II

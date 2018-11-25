@@ -5,8 +5,10 @@
 ; Atomic Spectra Database, the CHIANTI atomic database, and some improved atomic data from 
 ; Cloudy v13.04 and pyNeb v1.0
 
-; Update paths!
-Atom_RC_file='/home/atomic_data/atomneb/atomic-data-rc/rc_PPB91.fits'
+; Locate datasets
+base_dir = file_dirname(file_dirname((routine_info('$MAIN$', /source)).path))
+data_dir = ['atomic-data-rc']
+Atom_RC_file= filepath('rc_PPB91.fits', root_dir=base_dir, subdir=data_dir )
 
 atom='c'
 ion='iii' ; C II

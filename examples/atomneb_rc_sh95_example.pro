@@ -3,8 +3,10 @@
 
 ; Use Atomic Data Collection from Storey and Hummer (1995) 1995MNRAS.272...41S
 
-; Update paths!
-Atom_RC_file='/home/atomic_data/atomneb/atomic-data-rc/rc_SH95.fits'
+; Locate datasets
+base_dir = file_dirname(file_dirname((routine_info('$MAIN$', /source)).path))
+data_dir = ['atomic-data-rc']
+Atom_RC_file= filepath('rc_SH95.fits', root_dir=base_dir, subdir=data_dir )
 
 atom='h'
 ion='ii' ; H I

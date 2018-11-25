@@ -3,10 +3,12 @@
 
 ; Use Atomic Data from the CHIANTI atomic database version 5.2
 
-; Update paths!
-Atom_Elj_file='/home/atomic_data/atomneb/atomic-data/chianti52/AtomElj.fits'
-Atom_Omij_file='/home/atomic_data/atomneb/atomic-data/chianti52/AtomOmij.fits'
-Atom_Aij_file='/home/atomic_data/atomneb/atomic-data/chianti52/AtomAij.fits'
+; Locate datasets
+base_dir = file_dirname(file_dirname((routine_info('$MAIN$', /source)).path))
+data_dir = ['atomic-data', 'chianti52']
+Atom_Elj_file = filepath('AtomElj.fits', root_dir=base_dir, subdir=data_dir )
+Atom_Omij_file = filepath('AtomOmij.fits', root_dir=base_dir, subdir=data_dir )
+Atom_Aij_file = filepath('AtomAij.fits', root_dir=base_dir, subdir=data_dir )
 
 ; read Energy Levels (Ej) list
 elj_data_list=atomneb_read_elj_list(Atom_Elj_file)
