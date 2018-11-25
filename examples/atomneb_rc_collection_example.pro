@@ -6,8 +6,10 @@
 ; O II (Storey 1994 1994A&A...282..999S; Liu et al. 1995 1995MNRAS.272..369L), 
 ; and Ne II ions (Kisielius et al. 1998 1998A&AS..133..257K)
 
-; Update paths!
-Atom_RC_file='/home/atomic_data/atomneb/atomic-data-rc/rc_collection.fits'
+; Locate datasets
+base_dir = file_dirname(file_dirname((routine_info('$MAIN$', /source)).path))
+data_dir = ['atomic-data-rc']
+Atom_RC_file= filepath('rc_collection.fits', root_dir=base_dir, subdir=data_dir )
 
 atom='c'
 ion='iii' ; C II
