@@ -1,87 +1,213 @@
+; docformat = 'rst'
+
 function atomneb_read_aeff_collection, Atom_RC_file, atom, ion, br=br, reference=reference
+;+
+;     This function returns the effective recombination coefficients (Aeff) from the table extensions
+;     of the FITS data file ('rc_collection.fits').
+;
+; :Returns: 
+;    type=an array of data. This function returns the effective recombination coefficients.
+;           aeff_data (c_iii_aeff)
+;           { Wavelength:0.0,
+;             a: 0.0,
+;             b: 0.0,
+;             c: 0.0,
+;             d: 0.0,
+;             f: 0.0}
+;
+;           aeff_data (n_iii_aeff)
+;           { a: 0.0,
+;             b: 0.0,
+;             c: 0.0}
+;
+;           aeff_data (n_iii_br)
+;           {Wavelength: 0.0,
+;            BR: 0.0, $
+;            g1:0,
+;            g2:0,
+;            Mult1:'',
+;            LowerTerm:'',
+;            UpperTerm:'' }
+;
+;           aeff_data (o_iii_aeff)
+;           {Term: '',
+;            Case1: '',
+;            a2: 0.0,
+;            a4: 0.0,
+;            a5: 0.0,
+;            a6: 0.0,
+;            b: 0.0,
+;            c: 0.0,
+;            d: 0.0}
+;
+;           aeff_data (o_iii_br)
+;           {Wavelength:double(0.0),
+;            Br_A: 0.0,
+;            Br_B: 0.0,
+;            Br_C: 0.0,
+;            g1: 0,
+;            g2: 0,
+;            Mult1: '',
+;            LowerTerm: '',
+;            UpperTerm: ''}
+;
+;            aeff_data (ne_iii_aeff)
+;            {Wavelength:0.0,
+;             a: 0.0,
+;             b: 0.0,
+;             c: 0.0,
+;             d: 0.0,
+;             f: 0.0,
+;             br: 0.0}
+;
+; :Params:
+;     Atom_RC_file  : in, required, type=string
+;                     the FITS data file name ('rc_collection.fits')
+;     atom          : in, required, type=string
+;                     atom name e.g. 'c'
+;     ion           : in, required, type=string
+;                     ionic level e.g 'iii'
+;
+; :Keywords:
+;     br            : in, type=boolean
+;                     set for the branching ratios (Br), may not necessary
+;     reference     : in, type=string
+;                     set for the reference, not necessary
+;
+; :Examples:
+;    For example::
+;
+;     IDL> base_dir = file_dirname(file_dirname((routine_info('$MAIN$', /source)).path))
+;     IDL> data_rc_dir = ['atomic-data-rc']
+;     IDL> Atom_RC_file= filepath('rc_collection.fits', root_dir=base_dir, subdir=data_rc_dir )
+;     IDL> atom='c'
+;     IDL> ion='iii' ; C III
+;     IDL> cii_rc_data=atomneb_read_aeff_collection(Atom_RC_file, atom, ion)
+;     IDL> temp=size(cii_rc_data.Wavelength,/DIMENSIONS)
+;     IDL> n_line=temp[0]
+;     IDL> for i=0,n_line-1 do print,cii_rc_data[i].Wavelength, cii_rc_data[i].a, $
+;     IDL>                           cii_rc_data[i].b, cii_rc_data[i].c, $
+;     IDL>                           cii_rc_data[i].d, cii_rc_data[i].f
+;        914.00000      0.69280000     0.021400000    -0.016300000     -0.24310000     -0.88000000
+;        962.00000       1.0998000   -0.0042000000    -0.027900000     -0.22940000     -0.96560000
+;        ...
+;
+; :Categories:
+;   Recombination Lines
+;
+; :Dirs:
+;  ./
+;      Main routines
+;
+; :Author:
+;   Ashkbiz Danehkar
+;
+; :Copyright:
+;   This library is released under a GNU General Public License.
+;
+; :Version:
+;   0.0.1
+;
+; :History:
+;     15/01/2017, IDL code by A. Danehkar
+;-
+
 ;+
 ; NAME:
 ;     atomneb_read_aeff_collection
+;
 ; PURPOSE:
-;     read the effective recombination coefficients (Aeff) from the table extensions
-;     of the FITS data file (./rc_collection.fits)
-; EXPLANATION:
+;     This function returns the effective recombination coefficients (Aeff) from the table extensions
+;     of the FITS data file ('rc_collection.fits').
 ;
 ; CALLING SEQUENCE:
-;     atom='c'
-;     ion='iii'
-;     ciii_aeff_data=atomneb_read_aeff_collection(Atom_RC_file, atom, ion)
-;     for i=0,n_line-1 do print,rc_data[i].Wavelength, $
-;                               rc_data[i].a, $
-;                               rc_data[i].b, $
-;                               rc_data[i].c, $
-;                               rc_data[i].d, $
-;                               rc_data[i].f
+;     aeff_data=atomneb_read_aeff_collection(Atom_RC_file, atom, ion, br=br, reference=reference)
 ;
 ; INPUTS:
-;     fits_file - the MGFIT line data (./rc_collection.fits)
-;     atom - atom name e.g. 'c'
-;     ion - ionic level e.g 'iii'
-;     reference - reference, not necessary
-; RETURN:  aeff_data (c_iii_aeff)
-;          { Wavelength:0.0, 
-;            a: 0.0, 
-;            b: 0.0, 
-;            c: 0.0, 
-;            d: 0.0, 
-;            f: 0.0}
-;            
-; RETURN:  aeff_data (n_iii_aeff)
-;          { a: 0.0, 
-;            b: 0.0, 
-;            c: 0.0}
-;            
-; RETURN:  aeff_data (n_iii_br)
-;          {Wavelength: 0.0, 
-;           BR: 0.0, $
-;           g1:0, 
-;           g2:0, 
-;           Mult1:'', 
-;           LowerTerm:'', 
-;           UpperTerm:'' } 
-;           
-; RETURN:  aeff_data (o_iii_aeff)
-;          {Term: '', 
-;           Case1: '', 
-;           a2: 0.0, 
-;           a4: 0.0, 
-;           a5: 0.0, 
-;           a6: 0.0, 
-;           b: 0.0, 
-;           c: 0.0, 
-;           d: 0.0}
-;           
-; RETURN:  aeff_data (o_iii_br)
-;          {Wavelength:double(0.0), 
-;           Br_A: 0.0, 
-;           Br_B: 0.0, 
-;           Br_C: 0.0, 
-;           g1: 0, 
-;           g2: 0, 
-;           Mult1: '', 
-;           LowerTerm: '', 
-;           UpperTerm: ''}
-;            
-; RETURN:  aeff_data (ne_iii_aeff)
-;          { Wavelength:0.0, 
-;            a: 0.0, 
-;            b: 0.0, 
-;            c: 0.0, 
-;            d: 0.0, 
-;            f: 0.0,
-;            br: 0.0}
+;     Atom_RC_file  : in, required, type=string, the FITS data file name ('rc_collection.fits')
+;     Atom          : in, required, type=string, atom name e.g. 'c'
+;     Ion           : in, required, type=string, ionic level e.g 'iii'
+;     
+; KEYWORD PARAMETERS:
+;     BR            : in, type=boolean, set for the branching ratios (Br), may not necessary
+;     REFERENCE     : in, type=string, set for the reference, not necessary
 ;
-; REQUIRED EXTERNAL LIBRARY:
-;     ftab_ext from IDL Astronomy User's library (../externals/astron/pro)
+; OUTPUTS:  This function returns an array data of the effective recombination coefficients.
+;           aeff_data (c_iii_aeff)
+;           { Wavelength:0.0,
+;             a: 0.0,
+;             b: 0.0,
+;             c: 0.0,
+;             d: 0.0,
+;             f: 0.0}
 ;
-; REVISION HISTORY:
-;     IDL code by A. Danehkar, 15/01/2017
-;-  
+;           aeff_data (n_iii_aeff)
+;           { a: 0.0,
+;             b: 0.0,
+;             c: 0.0}
+;
+;           aeff_data (n_iii_br)
+;           {Wavelength: 0.0,
+;            BR: 0.0, $
+;            g1:0,
+;            g2:0,
+;            Mult1:'',
+;            LowerTerm:'',
+;            UpperTerm:'' }
+;
+;           aeff_data (o_iii_aeff)
+;           {Term: '',
+;            Case1: '',
+;            a2: 0.0,
+;            a4: 0.0,
+;            a5: 0.0,
+;            a6: 0.0,
+;            b: 0.0,
+;            c: 0.0,
+;            d: 0.0}
+;
+;           aeff_data (o_iii_br)
+;           {Wavelength:double(0.0),
+;            Br_A: 0.0,
+;            Br_B: 0.0,
+;            Br_C: 0.0,
+;            g1: 0,
+;            g2: 0,
+;            Mult1: '',
+;            LowerTerm: '',
+;            UpperTerm: ''}
+;
+;            aeff_data (ne_iii_aeff)
+;            {Wavelength:0.0,
+;             a: 0.0,
+;             b: 0.0,
+;             c: 0.0,
+;             d: 0.0,
+;             f: 0.0,
+;             br: 0.0}
+;    
+; PROCEDURE: This function calls atomneb_read_aeff_collection_list and 
+;            ftab_ext from IDL Astronomy User's library (../externals/astron/pro).
+;
+; EXAMPLE:
+;     base_dir = file_dirname(file_dirname((routine_info('$MAIN$', /source)).path))
+;     data_rc_dir = ['atomic-data-rc']
+;     Atom_RC_file= filepath('rc_collection.fits', root_dir=base_dir, subdir=data_rc_dir )
+;     atom='c'
+;     ion='iii' ; C III
+;     cii_rc_data=atomneb_read_aeff_collection(Atom_RC_file, atom, ion)
+;     temp=size(cii_rc_data.Wavelength,/DIMENSIONS)
+;     n_line=temp[0]
+;     for i=0,n_line-1 do print,cii_rc_data[i].Wavelength, cii_rc_data[i].a, $
+;                               cii_rc_data[i].b, cii_rc_data[i].c, $
+;                               cii_rc_data[i].d, cii_rc_data[i].f
+;     > 914.00000      0.69280000     0.021400000    -0.016300000     -0.24310000     -0.88000000
+;     > 962.00000       1.0998000   -0.0042000000    -0.027900000     -0.22940000     -0.96560000
+;     > ...
+;
+; MODIFICATION HISTORY:
+;     15/01/2017, IDL code by A. Danehkar
+;-
   element_data_list=atomneb_read_aeff_collection_list(Atom_RC_file)
 
   if keyword_set(br) eq 1 then prefix='_br' else prefix='_aeff'

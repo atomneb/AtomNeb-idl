@@ -1,27 +1,65 @@
+; docformat = 'rst'
+
 function atomneb_read_aeff_he_i_pfsd12_references, Atom_RC_file
+;+
+;     This function returns the reference list of recombination coefficients (Aeff) from the 2nd binary table extension
+;     of the FITS data file ('rc_he_ii_PFSD12.fits').
+;
+; :Private:
+;
+; :Returns:
+;    type=an array of data. This function returns the aeff_data_reference: 
+;          { Reference:'',
+;            Citation:''}
+;
+; :Params:
+;     Atom_RC_file  : in, required, type=string
+;                     the FITS data file name ('rc_he_ii_PFSD12.fits')
+;
+; :Categories:
+;   Recombination Lines
+;
+; :Dirs:
+;  ./
+;      Main routines
+;
+; :Author:
+;   Ashkbiz Danehkar
+;
+; :Copyright:
+;   This library is released under a GNU General Public License.
+;
+; :Version:
+;   0.0.1
+;
+; :History:
+;     15/01/2017, IDL code by A. Danehkar
+;-
+
 ;+
 ; NAME:
 ;     atomneb_read_aeff_he_i_pfsd12_references
+;
 ; PURPOSE:
-;     read the list of recombination coefficients (Aeff) from the 2nd binary table extension
-;     of the FITS data file (./rc_he_ii_PFSD12.fits)
-; EXPLANATION:
+;     This function returns the reference list of recombination coefficients (Aeff) from the 2nd binary table extension
+;     of the FITS data file ('rc_he_ii_PFSD12.fits').
 ;
 ; CALLING SEQUENCE:
-;     aeff_data_reference=atomneb_read_aeff_he_i_pfsd12_references(Atom_RC_file)
+;     aeff_data=atomneb_read_aeff_collection_references(Atom_RC_file)
 ;
 ; INPUTS:
-;     fits_file - the MGFIT line data (./rc_he_ii_PFSD12.fits)
-; RETURN:  aeff_data_reference
-;          { Reference:'', 
+;     Atom_RC_file  : in, required, type=string, the FITS data file name ('rc_he_ii_PFSD12.fits')
+;
+; OUTPUTS:  This function returns an array data of the aeff_data_reference
+;          { Reference:'',
 ;            Citation:''}
 ;
-; REQUIRED EXTERNAL LIBRARY:
-;     ftab_ext from IDL Astronomy User's library (../externals/astron/pro)
+; PROCEDURE: This function is called by atomneb_get_aeff_he_i_pfsd12_reference_citation. 
+;            This function calls ftab_ext from IDL Astronomy User's library (../externals/astron/pro).
 ;
-; REVISION HISTORY:
-;     IDL code by A. Danehkar, 15/01/2017
-;- 
+; MODIFICATION HISTORY:
+;     15/01/2017, IDL code by A. Danehkar
+;-
   reference_template={Reference:'', Citation: ''}
   
   ftab_ext,Atom_RC_file,[1,2],Reference,Citation,EXTEN_NO =2

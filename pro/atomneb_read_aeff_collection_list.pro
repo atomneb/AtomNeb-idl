@@ -1,27 +1,65 @@
+; docformat = 'rst'
+
 function atomneb_read_aeff_collection_list, Atom_RC_file
 ;+
+;     This function returns the list of effective recombination coefficients (Aeff) from the 1st binary table extension
+;     of the FITS data file ('rc_collection.fits')
+;
+; :Private:
+;
+; :Returns:
+;    type=an array of data. This function returns the aeff_data_list: 
+;           { Aeff_Data:'',
+;             Extention:0.0}
+;
+; :Params:
+;     Atom_RC_file  : in, required, type=string
+;                     the FITS data file name ('rc_collection.fits')
+;
+; :Categories:
+;   Recombination Lines
+;
+; :Dirs:
+;  ./
+;      Main routines
+;
+; :Author:
+;   Ashkbiz Danehkar
+;
+; :Copyright:
+;   This library is released under a GNU General Public License.
+;
+; :Version:
+;   0.0.1
+;
+; :History:
+;     15/01/2017, IDL code by A. Danehkar
+;-
+
+;+
 ; NAME:
-;     atomneb_read_aeff_collection_list
+;     atomneb_read_aeff_collection
+;
 ; PURPOSE:
-;     read the list of effective recombination coefficients (Aeff) from the 1st binary table extension
-;     of the FITS data file (./rc_collection.fits)
-; EXPLANATION:
+;     This function returns the list of effective recombination coefficients (Aeff) from the 1st binary table extension
+;     of the FITS data file ('rc_collection.fits')
 ;
 ; CALLING SEQUENCE:
-;     aeff_data_list=atomneb_read_aeff_collection_list(Atom_RC_file)
+;     aeff_data=atomneb_read_aeff_collection_list(Atom_RC_file, atom, ion, br=br, reference=reference)
 ;
 ; INPUTS:
-;     fits_file - the MGFIT line data (./rc_collection.fits)
-; RETURN:  aeff_data_list
-;          { Aeff_Data:'', 
-;            Extention:0.0}
+;     Atom_RC_file  : in, required, type=string, the FITS data file name ('rc_collection.fits')
 ;
-; REQUIRED EXTERNAL LIBRARY:
-;     ftab_ext from IDL Astronomy User's library (../externals/astron/pro)
+; OUTPUTS:  This function returns an array data of the aeff_data_list: 
+;           { Aeff_Data:'',
+;             Extention:0.0}
 ;
-; REVISION HISTORY:
-;     IDL code by A. Danehkar, 15/01/2017
-;- 
+; PROCEDURE: This function is called by atomneb_read_aeff_collection. This function calls 
+;            ftab_ext from IDL Astronomy User's library (../externals/astron/pro).
+;
+; MODIFICATION HISTORY:
+;     15/01/2017, IDL code by A. Danehkar
+;-
   element_template={Aeff_Data:'', Extention:0}
   
   ftab_ext,Atom_RC_file,[1,2],Aeff_Data,Extention,EXTEN_NO =1

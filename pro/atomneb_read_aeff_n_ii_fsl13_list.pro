@@ -1,29 +1,67 @@
+; docformat = 'rst'
+
 function atomneb_read_aeff_n_ii_fsl13_list, Atom_RC_file
 ;+
-; NAME:
-;     atomneb_read_aeff_n_ii_fsl13_list
-; PURPOSE:
-;     read the list of effective recombination coefficients (Aeff) from the 1st binary table extension
-;     of the FITS data file (./rc_n_iii_FSL13.fits)
-; EXPLANATION:
+;     This function returns the list of effective recombination coefficients (Aeff) from the 1st binary table extension
+;     of the FITS data file ('rc_n_iii_FSL13.fits')
 ;
-; CALLING SEQUENCE:
-;     aeff_data_list=atomneb_read_aeff_n_ii_fsl13_list(Atom_RC_file)
+; :Private:
 ;
-; INPUTS:
-;     fits_file - the MGFIT line data (./rc_n_iii_FSL13.fits)
-; RETURN:  aeff_data_list
+; :Returns:
+;    type=an array of data. This function returns the aeff_data_list: 
 ;          {Aeff_Data:'',  Extention:0, $
 ;           IND:long(0), Wavelength: float(0.0), $
 ;           Tr:'',  Trans: '', T_X: ''}
 ;
-; REQUIRED EXTERNAL LIBRARY:
-;     ftab_ext from IDL Astronomy User's library (../externals/astron/pro)
+; :Params:
+;     Atom_RC_file  : in, required, type=string
+;                     the FITS data file name ('rc_n_iii_FSL13.fits')
 ;
-; REVISION HISTORY:
-;     IDL code by A. Danehkar, 03/07/2017
-;- 
-  
+; :Categories:
+;   Recombination Lines
+;
+; :Dirs:
+;  ./
+;      Main routines
+;
+; :Author:
+;   Ashkbiz Danehkar
+;
+; :Copyright:
+;   This library is released under a GNU General Public License.
+;
+; :Version:
+;   0.0.1
+;
+; :History:
+;     03/07/2017, IDL code by A. Danehkar
+;-
+
+;+
+; NAME:
+;     atomneb_read_aeff_n_ii_fsl13_list
+;
+; PURPOSE:
+;     This function returns the list of effective recombination coefficients (Aeff) from the 1st binary table extension
+;     of the FITS data file ('rc_n_iii_FSL13.fits')
+;
+; CALLING SEQUENCE:
+;     aeff_data=atomneb_read_aeff_n_ii_fsl13_list(Atom_RC_file)
+;
+; INPUTS:
+;     Atom_RC_file  : in, required, type=string, the FITS data file name ('rc_n_iii_FSL13.fits')
+;
+; OUTPUTS:  This function returns an array data of the aeff_data_list: 
+;          {Aeff_Data:'',  Extention:0, $
+;           IND:long(0), Wavelength: float(0.0), $
+;           Tr:'',  Trans: '', T_X: ''}
+;
+; PROCEDURE: This function is called by atomneb_read_aeff_n_ii_fsl13. This function calls 
+;            ftab_ext from IDL Astronomy User's library (../externals/astron/pro).
+;
+; MODIFICATION HISTORY:
+;     03/07/2017, IDL code by A. Danehkar
+;-
   element_template={Aeff_Data:'',  Extention:0, $
                        IND:long(0), Wavelength: float(0.0), $
                        Tr:'',  Trans: '', T_X: ''}

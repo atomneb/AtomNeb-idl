@@ -1,27 +1,65 @@
+; docformat = 'rst'
+
 function atomneb_read_omij_list, Atom_Omij_file
+;+
+;     This function returns the list of collision strengths (omega_ij) from the 1st binary table extension
+;     of the FITS data file ('AtomOmij.fits').
+;
+; :Private:
+;
+; :Returns:
+;    type=an array of data. This function returns the omij_data_list: 
+;          { Omij_Data:'', 
+;            Extention:0.0}
+;
+; :Params:
+;     Atom_Omij_file  : in, required, type=string
+;                     the FITS data file name ('AtomOmij.fits')
+;
+; :Categories:
+;   Collisionally Excited Lines
+;
+; :Dirs:
+;  ./
+;      Main routines
+;
+; :Author:
+;   Ashkbiz Danehkar
+;
+; :Copyright:
+;   This library is released under a GNU General Public License.
+;
+; :Version:
+;   0.0.1
+;
+; :History:
+;     24/12/2015, IDL code by A. Danehkar
+;-
+
 ;+
 ; NAME:
 ;     atomneb_read_omij_list
+;
 ; PURPOSE:
-;     read the list of collision strengths (omega_ij) from the 1st binary table extension
-;     of the FITS data file (./AtomOmij.fits)
-; EXPLANATION:
+;     This function returns the list of collision strengths (omega_ij) from the 1st binary table extension
+;     of the FITS data file ('AtomOmij.fits').
 ;
 ; CALLING SEQUENCE:
 ;     omij_data_list=atomneb_read_omij_list(Atom_Omij_file)
 ;
 ; INPUTS:
-;     fits_file - the MGFIT line data (./AtomOmij.fits)
-; RETURN:  omij_data_list
+;     Atom_Omij_file  : in, required, type=string, the FITS data file name ('AtomOmij.fits')
+;
+; OUTPUTS:  This function returns an array data of the omij_data_list: 
 ;          { Omij_Data:'', 
 ;            Extention:0.0}
 ;
-; REQUIRED EXTERNAL LIBRARY:
-;     ftab_ext from IDL Astronomy User's library (../externals/astron/pro)
+; PROCEDURE: This function is called by atomneb_read_omij. This function calls 
+;            ftab_ext from IDL Astronomy User's library (../externals/astron/pro).
 ;
-; REVISION HISTORY:
-;     IDL code by A. Danehkar, 24/12/2015
-;- 
+; MODIFICATION HISTORY:
+;     24/12/2015, IDL code by A. Danehkar
+;-
   element_template={Omij_Data:'', Extention:0}
   
   ftab_ext,Atom_Omij_file,[1,2],Omij_Data,Extention,EXTEN_NO =1

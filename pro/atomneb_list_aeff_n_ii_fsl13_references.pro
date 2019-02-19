@@ -1,28 +1,86 @@
+; docformat = 'rst'
+
 function atomneb_list_aeff_n_ii_fsl13_references, Atom_RC_file, atom, ion
+;+
+;     This function returns a list for all references of recombination coefficients (Aeff)
+;     for given element and ionic level from the FITS data file ('rc_n_iii_FSL13.fits').
+;
+; :Returns:
+;    type=an array of strings. This function returns the references.
+;
+; :Params:
+;     Atom_RC_file  : in, required, type=string
+;                     the FITS data file name ('rc_n_iii_FSL13.fits')
+;     atom          : in, required, type=string
+;                     atom name e.g. 'n'
+;     ion           : in, required, type=string
+;                     ionic level e.g 'iii'
+;
+; :Examples:
+;    For example::
+;
+;     IDL> base_dir = file_dirname(file_dirname((routine_info('$MAIN$', /source)).path))
+;     IDL> data_dir = ['atomic-data-rc']
+;     IDL> Atom_RC_file= filepath('rc_n_iii_FSL13.fits', root_dir=base_dir, subdir=data_dir )
+;     IDL> atom='n'
+;     IDL> ion='iii' ; N II
+;     IDL> list_nii_aeff_reference=atomneb_list_aeff_n_ii_fsl13_references(Atom_RC_file, atom, ion)
+;     IDL> print,list_nii_aeff_reference
+;        
+;
+; :Categories:
+;   Recombination Lines
+;
+; :Dirs:
+;  ./
+;      Main routines
+;
+; :Author:
+;   Ashkbiz Danehkar
+;
+; :Copyright:
+;   This library is released under a GNU General Public License.
+;
+; :Version:
+;   0.0.1
+;
+; :History:
+;     03/07/2017, IDL code by A. Danehkar
+;-
+
 ;+
 ; NAME:
 ;     atomneb_list_aeff_n_ii_fsl13_references
+;
 ; PURPOSE:
-;     list all references of recombination coefficients (Aeff) 
-;     for given element and ionic level
-; EXPLANATION:
+;     This function returns a list for all references of recombination coefficients (Aeff)
+;     for given element and ionic level from the FITS data file ('rc_n_iii_FSL13.fits').
 ;
 ; CALLING SEQUENCE:
-;     atom='n'
-;     ion='iii'
-;     list_hi_aeff_reference=atomneb_list_aeff_n_ii_fsl13_references(Atom_RC_file, atom, ion)
-;     print,list_hi_aeff_reference
+;     reference_list=atomneb_list_aeff_collection_references(Atom_RC_file, atom, ion)
 ;
 ; INPUTS:
-;     fits_file - the MGFIT line data (./rc_n_iii_FSL13.fits)
-; RETURN:  References: Array of Strings
+;     Atom_RC_file  : in, required, type=string, the FITS data file name ('rc_n_iii_FSL13.fits')
+;     Atom          : in, required, type=string, atom name e.g. 'n'
+;     Ion           : in, required, type=string, ionic level e.g 'iii'
 ;
-; REQUIRED EXTERNAL LIBRARY:
-;     ftab_ext from IDL Astronomy User's library (../externals/astron/pro)
+; OUTPUTS:  This function returns an array of strings as the references.
 ;
-; REVISION HISTORY:
-;     IDL code by A. Danehkar, 03/07/2017
-;- 
+; PROCEDURE: This function calls ftab_ext from IDL Astronomy User's library (../externals/astron/pro).
+;
+; EXAMPLE:
+;     base_dir = file_dirname(file_dirname((routine_info('$MAIN$', /source)).path))
+;     data_dir = ['atomic-data-rc']
+;     Atom_RC_file= filepath('rc_n_iii_FSL13.fits', root_dir=base_dir, subdir=data_dir )
+;     atom='n'
+;     ion='iii' ; N II
+;     list_nii_aeff_reference=atomneb_list_aeff_n_ii_fsl13_references(Atom_RC_file, atom, ion)
+;     print,list_nii_aeff_reference
+;     > 
+;
+; MODIFICATION HISTORY:
+;     03/07/2017, IDL code by A. Danehkar
+;-
   rc_reference_template={AtomicData:'', Reference: ''}
   
   rc_reference_data=atomneb_read_aeff_n_ii_fsl13_references(Atom_RC_file)
