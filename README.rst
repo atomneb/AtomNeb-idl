@@ -2,11 +2,11 @@
 AtomNeb (IDL version)
 =======
     
-.. image:: https://travis-ci.org/equib/AtomNeb-idl.svg?branch=master
+.. image:: https://travis-ci.org/atomneb/AtomNeb-idl.svg?branch=master
     :target: https://travis-ci.org/atomneb/AtomNeb-idl
     :alt: Build Status
 
-.. image:: https://ci.appveyor.com/api/projects/status/at7fd0xbr1e9u75g?svg=true
+.. image:: https://ci.appveyor.com/api/projects/status/gi4ok3wy7jjn1ekb?svg=true
     :target: https://ci.appveyor.com/project/danehkar/atomneb-idl
     :alt: Build Status
 
