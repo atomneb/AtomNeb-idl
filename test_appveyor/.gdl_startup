@@ -1,0 +1,5 @@
+!PATH=!PATH + ':/home/appveyor/projects/atomneb-idl/pro/'
+!PATH=!PATH + ':/home/appveyor/projects/atomneb-idl/externals/astron/pro/'
+!DIR='/home/appveyor/projects/atomneb-idl/'
+print, '%** Personal settings are loaded and active **';
+

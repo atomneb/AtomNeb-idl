@@ -1,0 +1,37 @@
+language: generic
+sudo: required
+dist: xenial
+group: travis_latest
+
+git:
+  depth: 3
+  quiet: true
+
+os:
+- linux
+
+#addons:
+#  apt:
+#    packages:
+#      - gnudatalanguage
+
+
+# FIXME: temporary for travis xenial
+before_install:
+- sudo apt-get -yq update > /dev/null
+- sudo apt-get install -yq --no-install-suggests --no-install-recommends gnudatalanguage > /dev/null
+
+install:
+- export GDL_STARTUP=/home/travis/build/atomneb/AtomNeb-idl/test_travis/.gdl_startup
+
+script:
+- gdl -e @test_travis/atomneb_chianti52_example.pro
+- gdl -e @test_travis/atomneb_chianti60_example.pro
+- gdl -e @test_travis/atomneb_chianti70_example.pro
+- gdl -e @test_travis/atomneb_collection_example.pro
+- gdl -e @test_travis/atomneb_rc_ppb91_example.pro
+- gdl -e @test_travis/atomneb_rc_sh95_example.pro
+- gdl -e @test_travis/atomneb_rc_collection_example.pro
+- gdl -e @test_travis/atomneb_rc_he_i_pfsd12_example.pro
+- gdl -e @test_travis/atomneb_rc_n_ii_fsl13_example.pro
+

@@ -1,0 +1,5 @@
+!PATH=!PATH + ':/home/travis/build/atomneb/AtomNeb-idl/pro/'
+!PATH=!PATH + ':/home/travis/build/atomneb/AtomNeb-idl/externals/astron/pro/'
+!DIR='/home/travis/build/atomneb/AtomNeb-idl/'
+print, '%** Personal settings are loaded and active **';
+
