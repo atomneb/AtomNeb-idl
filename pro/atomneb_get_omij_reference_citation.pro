@@ -63,7 +63,7 @@ function atomneb_get_omij_reference_citation, Atom_Omij_file, atom, ion, referen
 ;     citation=atomneb_get_omij_reference_citation(Atom_Elj_file, atom, ion, reference)
 ;
 ; INPUTS:
-;     Atom_Elj_file : in, required, type=string, the FITS data file name ('AtomOmij.fits')
+;     Atom_Omij_file: in, required, type=string, the FITS data file name ('AtomOmij.fits')
 ;     Atom          : in, required, type=string, atom name e.g. 'o'
 ;     Ion           : in, required, type=string, ionic level e.g 'iii'
 ;     Reference     : in, type=string, set for the reference e.g. 'SSB14'

@@ -1,0 +1,81 @@
+.. title:: AtomNeb (IDL) Overview
+
+`AtomNeb (IDL) <https://atomneb.github.io/AtomNeb-idl>` is an IDL library for reading atomic data from the `AtomNeb` database for *collisionally excited lines* and *recombination lines* commonly observed in ionized nebulae.
+
+* `AtomNeb database for collisionally excited lines` contains energy levels (Ej), collision strengths (Ωij), and transition probabilities (Aij) of the most ions commonly observed in ionized nebulae:
+
+    - `Collection dataset` was compiled according to the atomic data used in `pyNeb v1.0 <http://www.iac.es/proyecto/PyNeb/>` and includes some improved atomic data from `Cloudy v13.04 <https://www.nublado.org/>` and the `National Institute of Standards and Technology (NIST) Atomic Spectra Database <https://www.nist.gov/pml/atomic-spectra-database>`, the `CHIANTI atomic database <http://www.chiantidatabase.org/>`.
+
+    - `Chianti52, Chianti60, and Chianti70 datasets` were compiled according to the atomic data used in the FORTRAN program `MOCASSIN <https://github.com/mocassin/MOCASSIN-2.0>`.
+
+* `AtomNeb database for recombination lines` contains effective recombination coefficient (αeff), and Branching ratios (Br) of the most ions commonly observed in ionized nebulae.
+
+    - `RC Collection dataset` was compiled according to the atomic data used in the FORTRAN program `MOCASSIN <https://github.com/mocassin/MOCASSIN-2.0>`, and includes C II (`Davey et al. 2000 <http://adsabs.harvard.edu/abs/2000A%26AS..142...85D>`), N II (`Escalante and Victor 1990 <http://adsabs.harvard.edu/abs/1990ApJS...73..513E>`), O II (`Storey 1994 <http://adsabs.harvard.edu/abs/1994A%26A...282..999S>`; `Liu et al. 1995 <http://adsabs.harvard.edu/abs/1995MNRAS.272..369L>`), and Ne II ions (`Kisielius et al. 1998 <http://adsabs.harvard.edu/abs/1998A%26AS..133..257K>`).
+
+    - `SH95 Collection dataset` was compiled using hydrogenic ions for Z=1 to 8, namely H I, He II, Li III, Be IV, B V, C VI, N VII, and O VIII ions from `Storey and Hummer (1995) <http://adsabs.harvard.edu/abs/1995MNRAS.272...41S>`.
+
+    - `PPB91 Collection dataset` was compiled using the atomic data for H, He, C, N, O, Ne ions from `Pequignot, Petitjean and Boisson (1991) <http://adsabs.harvard.edu/abs/1991A%26A...251..680P>`.
+
+    - `PFSD12 He I dataset` was compiled using effective He I recombination coefficients from `Porter et al (2012) <http://adsabs.harvard.edu/abs/2012MNRAS.425L..28P>` and `(2013) <http://adsabs.harvard.edu/abs/2013MNRAS.433L..89P>`.
+
+    - `FSL13 N II dataset` was compiled using effective N II recombination coefficients from `Fang, Storey and Liu (2011) <http://adsabs.harvard.edu/abs/2011A%26A...530A..18F>` and `(2013) <http://adsabs.harvard.edu/abs/2013A%26A...550C...2F>`.
+
+    - `SSB17 O II dataset` was compiled using  effective O II recombination coefficients from `Storey, Sochi and Bastin (2017) <http://adsabs.harvard.edu/abs/2017MNRAS.470..379S>`.
+
+
+
+Dependencies
+------------
+
+* This package requires the following packages:
+
+    - `The IDL Astronomy User's Library <https://idlastro.gsfc.nasa.gov/homepage.html>`
+    
+* To get this package with all the dependent packages, you can simply use ``git`` command as follows::
+
+        git clone --recursive https://github.com/atomneb/AtomNeb-idl.git
+
+
+GDL Installation
+----------------
+
+*  The GNU Data Language (GDL) can be installed on
+
+    - Linux (Fedora)::
+
+        sudo dnf install gdl
+    
+    - Linux (Ubuntu)::
+    
+        sudo apt-get install gnudatalanguage
+    
+    - OS X::
+    
+        brew install gnudatalanguage
+    
+    - Windows: using the `GNU Data Language for Win32 <https://sourceforge.net/projects/gnudatalanguage-win32/>` (Unofficial Version) or compiling the `GitHub source <https://github.com/gnudatalanguage/gdl>` with Visual Studio 2015 as seen in `appveyor.yml <https://github.com/gnudatalanguage/gdl/blob/master/appveyor.yml>`.
+
+
+* To setup `AtomNeb-idl <https://atomneb.github.io/AtomNeb-idl>` in GDL, add its path to ``.gdl_startup`` in the home directory::
+
+    !PATH=!PATH + ':/home/AtomNeb-idl/pro/'
+    !PATH=!PATH + ':/home/AtomNeb-idl/externals/astron/pro/'
+
+  Set ``GDL_STARTUP`` in ``.bashrc`` (bash)::
+
+    export GDL_STARTUP=~/.gdl_startup
+
+  or in ``.tcshrc`` (cshrc)::
+
+    setenv GDL_STARTUP ~/.gdl_startup
+
+* This package needs GDL version 0.9.8 or later.
+
+IDL Installation
+----------------
+
+* To install `AtomNeb-idl <https://atomneb.github.io/AtomNeb-idl>` in IDL, add its path to your IDL path. For more information about the path management in IDL, read `the IDL path management <https://www.harrisgeospatial.com/Support/Self-Help-Tools/Help-Articles/Help-Articles-Detail/ArtMID/10220/ArticleID/16156/Quick-tips-for-customizing-your-IDL-program-search-path>` by Harris Geospatial or `the IDL library installation  <http://www.idlcoyote.com/code_tips/installcoyote.php>` by David Fanning. 
+
+* This package needs IDL version 7.1 or later. 
+
+

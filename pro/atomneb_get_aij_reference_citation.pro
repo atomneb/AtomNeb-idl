@@ -9,7 +9,7 @@ function atomneb_get_aij_reference_citation, Atom_Aij_file, atom, ion, reference
 ;    type=string. This function returns the Citation.
 ;
 ; :Params:
-;     Atom_RC_file  : in, required, type=string
+;     Atom_Aij_file : in, required, type=string
 ;                     the FITS data file name ('AtoAij.fits')
 ;     atom          : in, required, type=string
 ;                     atom name e.g. 'o'

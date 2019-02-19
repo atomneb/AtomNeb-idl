@@ -1,28 +1,12 @@
+; docformat = 'rst'
+
 function atomneb_read_aeff_ppb91, Atom_RC_file, atom, ion, reference=reference
 ;+
-; NAME:
-;     atomneb_read_aeff_ppb91
-; PURPOSE:
-;     read the effective recombination coefficients (Aeff) from the table extensions
-;     of the FITS data file (./rc_PPB91.fits)
-; EXPLANATION:
+;     This function returns the effective recombination coefficients (Aeff) from the table extensions
+;     of the FITS data file ('rc_PPB91.fits').
 ;
-; CALLING SEQUENCE:
-;     atom='c'
-;     ion='iii'
-;     cii_aeff_data=atomneb_read_aeff_ppb91(Atom_RC_file, atom, ion)
-;     for i=0,n_line-1 do print,cii_aeff_data[i].Ion,cii_aeff_data[i].Case1, $
-;                          cii_aeff_data[i].Wavelength, cii_aeff_data[i].a, $
-;                          cii_aeff_data[i].b, cii_aeff_data[i].c, $
-;                          cii_aeff_data[i].d, cii_aeff_data[i].br, $
-;                          cii_aeff_data[i].Q, cii_aeff_data[i].y
-;
-; INPUTS:
-;     fits_file - the MGFIT line data (./rc_PPB91.fits)
-;     atom - atom name e.g. 'o'
-;     ion - ionic level e.g 'iii'
-;     reference - reference, not necessary
-; RETURN:  aeff_data
+; :Returns:
+;    type=an array of data. This function returns the effective recombination coefficients:
 ;          { Ion: ' '
 ;            Case1:''
 ;            Wavelength:0.0, 
@@ -33,11 +17,111 @@ function atomneb_read_aeff_ppb91, Atom_RC_file, atom, ion, reference=reference
 ;            br: 0.0, 
 ;            y: 0.0}
 ;
-; REQUIRED EXTERNAL LIBRARY:
-;     ftab_ext from IDL Astronomy User's library (../externals/astron/pro)
+; :Params:
+;     Atom_RC_file  : in, required, type=string
+;                     the FITS data file name ('rc_PPB91.fits')
+;     atom          : in, required, type=string
+;                     atom name e.g. 'c'
+;     ion           : in, required, type=string
+;                     ionic level e.g 'iii'  
 ;
-; REVISION HISTORY:
-;     IDL code by A. Danehkar, 15/01/2017
+; :Keywords:
+;     reference     : in, type=string
+;                     set for the reference,  not necessary
+;
+; :Examples:
+;    For example::
+;
+;     IDL> base_dir = file_dirname(file_dirname((routine_info('$MAIN$', /source)).path))
+;     IDL> data_rc_dir = ['atomic-data-rc']
+;     IDL> Atom_RC_file= filepath('rc_PPB91.fits', root_dir=base_dir, subdir=data_dir )
+;     IDL> atom='c'
+;     IDL> ion='iii' ; C II
+;     IDL> cii_rc_data=atomneb_read_aeff_ppb91(Atom_RC_file, atom, ion)
+;     IDL> temp=size(cii_rc_data.Wavelength,/DIMENSIONS)
+;     IDL> n_line=temp[0]
+;     IDL> for i=0,n_line-1 do print,cii_rc_data[i].Ion,cii_rc_data[i].Case1, $
+;     IDL>                           cii_rc_data[i].Wavelength, cii_rc_data[i].a, $
+;     IDL>                           cii_rc_data[i].b, cii_rc_data[i].c, $
+;     IDL>                           cii_rc_data[i].d, cii_rc_data[i].br, $
+;     IDL>                           cii_rc_data[i].Q, cii_rc_data[i].y
+;        C2+A       9903.4600      0.69700000     -0.78400000      ...
+;        C2+A       4267.1500       1.0110000     -0.75400000      ...
+;        ...
+;
+; :Categories:
+;   Recombination Lines
+;
+; :Dirs:
+;  ./
+;      Main routines
+;
+; :Author:
+;   Ashkbiz Danehkar
+;
+; :Copyright:
+;   This library is released under a GNU General Public License.
+;
+; :Version:
+;   0.0.1
+;
+; :History:
+;     15/01/2017, IDL code by A. Danehkar
+;-
+
+;+
+; NAME:
+;     atomneb_read_aeff_ppb91
+;
+; PURPOSE:
+;     This function returns the effective recombination coefficients (Aeff) from the table extensions
+;     of the FITS data file ('rc_PPB91.fits').
+;
+; CALLING SEQUENCE:
+;     aeff_data=atomneb_read_aeff_ppb91(Atom_RC_file, atom, ion, reference=reference)
+;
+; INPUTS:
+;     Atom_RC_file  : in, required, type=string, the FITS data file name ('rc_PPB91.fits')
+;     Atom          : in, required, type=string, atom name e.g. 'c'
+;     Ion           : in, required, type=string, ionic level e.g 'iii'
+;
+; KEYWORD PARAMETERS:
+;     REFERENCE     : in, type=string, set for the reference, not necessary
+;
+; OUTPUTS:  This function returns an array data of the effective recombination coefficients:
+;          { Ion: ' '
+;            Case1:''
+;            Wavelength:0.0, 
+;            a: 0.0, 
+;            b: 0.0, 
+;            c: 0.0, 
+;            d: 0.0, 
+;            br: 0.0, 
+;            y: 0.0}
+;
+; PROCEDURE: This function calls atomneb_read_aeff_ppb91_list and
+;            ftab_ext from IDL Astronomy User's library (../externals/astron/pro).
+;
+; EXAMPLE:
+;     base_dir = file_dirname(file_dirname((routine_info('$MAIN$', /source)).path))
+;     data_rc_dir = ['atomic-data-rc']
+;     Atom_RC_file= filepath('rc_PPB91.fits', root_dir=base_dir, subdir=data_dir )
+;     atom='c'
+;     ion='iii' ; C II
+;     cii_rc_data=atomneb_read_aeff_ppb91(Atom_RC_file, atom, ion)
+;     temp=size(cii_rc_data.Wavelength,/DIMENSIONS)
+;     n_line=temp[0]
+;     for i=0,n_line-1 do print,cii_rc_data[i].Ion,cii_rc_data[i].Case1, $
+;                               cii_rc_data[i].Wavelength, cii_rc_data[i].a, $
+;                               cii_rc_data[i].b, cii_rc_data[i].c, $
+;                               cii_rc_data[i].d, cii_rc_data[i].br, $
+;                               cii_rc_data[i].Q, cii_rc_data[i].y
+;     > C2+A       9903.4600      0.69700000     -0.78400000      ...
+;     > C2+A       4267.1500       1.0110000     -0.75400000      ...
+;     > ...
+;
+; MODIFICATION HISTORY:
+;     15/01/2017, IDL code by A. Danehkar
 ;-  
   element_data_list=atomneb_read_aeff_ppb91_list(Atom_RC_file)
   if keyword_set(reference) eq 1 then begin

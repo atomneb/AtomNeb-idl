@@ -1,37 +1,112 @@
+; docformat = 'rst'
+
 function atomneb_read_omij, Atom_Omij_file, atom, ion, reference=reference, level_num=level_num
+;+
+;     This function returns the collision strengths (omega_ij) from the table extensions
+;     of the FITS data file ('AtomOmij.fits').
+;
+; :Returns:
+;    type=an array of data. This function returns the omij_data:
+;          { level1:0, 
+;            level2:0, 
+;            strength:dblarr(temp_steps)}.
+;
+; :Params:
+;     Atom_Omij_file  : in, required, type=string
+;                     the FITS data file name ('AtomOmij.fits')
+;     atom          : in, required, type=string
+;                     atom name e.g. 'o'
+;     ion           : in, required, type=string
+;                     ionic level e.g 'iii'
+;
+; :Keywords:
+;     reference     : in, type=string
+;                     set for the reference e.g. 'SSB14'
+;     level_num     : in, type=string
+;                     set for the maximum level number.
+;
+; :Examples:
+;    For example::
+;
+;     IDL> base_dir = file_dirname(file_dirname((routine_info('$MAIN$', /source)).path))
+;     IDL> data_dir = ['atomic-data', 'collection']
+;     IDL> Atom_Omij_file = filepath('AtomOmij.fits', root_dir=base_dir, subdir=data_dir )
+;     IDL> atom='o'
+;     IDL> ion='iii'
+;     IDL> reference='SSB14'
+;     IDL> oiii_omij_data=atomneb_read_omij(Atom_Omij_file, atom, ion, reference=reference)
+;     IDL> print,oiii_omij_data.level1
+;        0       1       1       1       1       2       2       2       3       3       4
+;     IDL> print,oiii_omij_data.level2
+;        0       2       3       4       5       3       4       5       4       5       5
+;     IDL> print,oiii_omij_data[0].strength
+;        100.00000       125.89254       158.48932       199.52623       251.18864       ...
+;
+; :Categories:
+;   Collisionally Excited Lines
+;
+; :Dirs:
+;  ./
+;      Main routines
+;
+; :Author:
+;   Ashkbiz Danehkar
+;
+; :Copyright:
+;   This library is released under a GNU General Public License.
+;
+; :Version:
+;   0.0.1
+;
+; :History:
+;     24/12/2015, IDL code by A. Danehkar
+;-
+
 ;+
 ; NAME:
 ;     atomneb_read_omij
+;
 ; PURPOSE:
-;     read the collision strengths (omega_ij) from the table extensions
-;     of the FITS data file (./AtomOmij.fits)
-; EXPLANATION:
+;     This function returns the collision strengths (omega_ij) from the table extensions
+;     of the FITS data file ('AtomOmij.fits').
 ;
 ; CALLING SEQUENCE:
+;     omij_data=atomneb_read_omij(Atom_Omij_file, atom, ion, reference=reference, level_num=level_num)
+;
+; INPUTS:
+;     Atom_Elj_file : in, required, type=string, the FITS data file name ('AtomOmij.fits')
+;     Atom          : in, required, type=string, atom name e.g. 'o'
+;     Ion           : in, required, type=string, ionic level e.g 'iii'
+;
+; KEYWORD PARAMETERS:
+;     REFERENCE     : in, type=string, set for the reference e.g. 'SSB14'
+;     LEVEL_NUM     : in, type=string, set for the maximum level number.
+;
+; OUTPUTS:  This function returns an array data of the omij_data:
+;          { level1:0, 
+;            level2:0, 
+;            strength:dblarr(temp_steps)}.
+;
+; PROCEDURE: This function calls atomneb_read_omij_list and
+;            ftab_ext from IDL Astronomy User's library (../externals/astron/pro).
+;
+; EXAMPLE:
+;     base_dir = file_dirname(file_dirname((routine_info('$MAIN$', /source)).path))
+;     data_dir = ['atomic-data', 'collection']
+;     Atom_Omij_file = filepath('AtomOmij.fits', root_dir=base_dir, subdir=data_dir )
 ;     atom='o'
 ;     ion='iii'
 ;     reference='SSB14'
 ;     oiii_omij_data=atomneb_read_omij(Atom_Omij_file, atom, ion, reference=reference)
 ;     print,oiii_omij_data.level1
+;     > 0       1       1       1       1       2       2       2       3       3       4
 ;     print,oiii_omij_data.level2
+;     > 0       2       3       4       5       3       4       5       4       5       5
 ;     print,oiii_omij_data[0].strength
+;     > 100.00000       125.89254       158.48932       199.52623       251.18864       ...
 ;
-; INPUTS:
-;     fits_file - the MGFIT line data (./AtomOmij.fits)
-;     atom - atom name e.g. 'o'
-;     ion - ionic level e.g 'iii'
-;     reference - reference, optional e.g. 'SSB14', not necessary for Chianti52,60,70
-;     level_num - maximum level number, optional, not necessary
-; RETURN:  omij_data
-;          { level1:0, 
-;            level2:0, 
-;            strength:dblarr(temp_steps)}
-;
-; REQUIRED EXTERNAL LIBRARY:
-;     ftab_ext from IDL Astronomy User's library (../externals/astron/pro)
-;
-; REVISION HISTORY:
-;     IDL code by A. Danehkar, 24/12/2015
+; MODIFICATION HISTORY:
+;     24/12/2015, IDL code by A. Danehkar
 ;-  
   element_data_list=atomneb_read_omij_list(Atom_Omij_file)
   if keyword_set(reference) eq 1 then begin
