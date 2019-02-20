@@ -31,9 +31,10 @@ function atomneb_read_aeff_o_ii_ssb17, Atom_RC_file, atom, ion, case1, wavelengt
 ;
 ;     IDL> base_dir = file_dirname(file_dirname((routine_info('$MAIN$', /source)).path))
 ;     IDL> data_rc_dir = ['atomic-data-rc']
-;     IDL> Atom_RC_file= filepath('rc_n_iii_FSL13.fits', root_dir=base_dir, subdir=data_dir )
+;     IDL> Atom_RC_file= filepath('rc_o_iii_SSB17.fits', root_dir=base_dir, subdir=data_dir )
 ;     IDL> atom='o'
 ;     IDL> ion='iii' ; O II
+;     IDL> case1='B'
 ;     IDL> wavelength_range=[5320.0, 5330.0] 
 ;     IDL> oii_rc_data=atomneb_read_aeff_o_ii_ssb17(Atom_RC_file, atom, ion, case1, wavelength_range)
 ;     IDL> oii_rc_data_wave=atomneb_read_aeff_o_ii_ssb17(Atom_RC_file, atom, ion, case1, wavelength_range, /wavelength)
@@ -97,9 +98,10 @@ function atomneb_read_aeff_o_ii_ssb17, Atom_RC_file, atom, ion, case1, wavelengt
 ; EXAMPLE:
 ;     base_dir = file_dirname(file_dirname((routine_info('$MAIN$', /source)).path))
 ;     data_rc_dir = ['atomic-data-rc']
-;     Atom_RC_file= filepath('rc_n_iii_FSL13.fits', root_dir=base_dir, subdir=data_dir )
+;     Atom_RC_file= filepath('rc_o_iii_SSB17.fits', root_dir=base_dir, subdir=data_dir )
 ;     atom='o'
 ;     ion='iii' ; O II
+;     case1='B'
 ;     wavelength_range=[5320.0, 5330.0] 
 ;     oii_rc_data=atomneb_read_aeff_o_ii_ssb17(Atom_RC_file, atom, ion, case1, wavelength_range)
 ;     oii_rc_data_wave=atomneb_read_aeff_o_ii_ssb17(Atom_RC_file, atom, ion, case1, wavelength_range, /wavelength)

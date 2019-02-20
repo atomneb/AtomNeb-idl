@@ -17,7 +17,7 @@ http://adsabs.harvard.edu/abs/2012MNRAS.425L..28P) and [(2013)](http://adsabs.ha
 http://adsabs.harvard.edu/abs/2011A%26A...530A..18F) and [(2013)](http://adsabs.harvard.edu/abs/2013A%26A...550C...2F).
 
 * **rc_o_iii_SSB17.fits**, effective O II recombination coefficients of 8889 recombination lines for Cases A, B, and C from [Storey, Sochi and Bastin (2017)](
-http://adsabs.harvard.edu/abs/2017MNRAS.470..379S). (Use these commends to merge and unpack: cat rc_o_iii_SSB17.fits.tar.gz.parta* >rc_o_iii_SSB17.fits.tar.gz; tar -xvf rc_o_iii_SSB17.fits.tar.gz)
+http://adsabs.harvard.edu/abs/2017MNRAS.470..379S). (Use these commends to unpack: tar -xvf rc_o_iii_SSB17.fits.tar.gz)
 
 * **rc_o_iii_SSB17_orl_case_b.fits**, effective O II recombination coefficients of 2433 optical recombination lines for Case B (Wavelength: 3500-9000Å) from [Storey, Sochi and Bastin (2017)](
 http://adsabs.harvard.edu/abs/2017MNRAS.470..379S). (Use this commend to unpack: tar -xvf rc_o_iii_SSB17_orl_case_b.fits.tar.gz)

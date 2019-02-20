@@ -27,7 +27,7 @@ function atomneb_get_aeff_sh95_reference_citation, Atom_RC_file, atom, ion, refe
 ;   
 ;     IDL> base_dir = file_dirname(file_dirname((routine_info('$MAIN$', /source)).path))
 ;     IDL> data_dir = ['atomic-data-rc']
-;     IDL> Atom_RC_file= filepath('rc_PPB91.fits', root_dir=base_dir, subdir=data_dir )
+;     IDL> Atom_RC_file= filepath('rc_SH95.fits', root_dir=base_dir, subdir=data_dir )
 ;     IDL> atom='h'
 ;     IDL> ion='ii' ; H I
 ;     IDL> citation=atomneb_get_aeff_sh95_reference_citation(Atom_RC_file, atom, ion)
@@ -82,7 +82,7 @@ function atomneb_get_aeff_sh95_reference_citation, Atom_RC_file, atom, ion, refe
 ; EXAMPLE:
 ;     base_dir = file_dirname(file_dirname((routine_info('$MAIN$', /source)).path))
 ;     data_dir = ['atomic-data-rc']
-;     Atom_RC_file= filepath('rc_PPB91.fits', root_dir=base_dir, subdir=data_dir )
+;     Atom_RC_file= filepath('rc_SH95.fits', root_dir=base_dir, subdir=data_dir )
 ;     atom='h'
 ;     ion='ii' ; H I
 ;     citation=atomneb_get_aeff_sh95_reference_citation(Atom_RC_file, atom, ion)

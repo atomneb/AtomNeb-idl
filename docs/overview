@@ -1,4 +1,4 @@
-.. title:: AtomNeb (IDL) Overview
+.. title:: AtomNeb Overview
 
 `AtomNeb (IDL) <https://atomneb.github.io/AtomNeb-idl>` is an IDL library for reading atomic data from the `AtomNeb` database for *collisionally excited lines* and *recombination lines* commonly observed in ionized nebulae.
 
