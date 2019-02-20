@@ -1,6 +1,6 @@
 orig_quiet = !quiet
 !quiet = 1
-@proequib__compile_all
+@atomneb__compile_all
 !quiet = orig_quiet
 
 profiler

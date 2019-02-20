@@ -1,6 +1,6 @@
 .. title:: AtomNeb Overview
 
-`AtomNeb (IDL) <https://atomneb.github.io/AtomNeb-idl>` is an IDL library for reading atomic data from the `AtomNeb` database for *collisionally excited lines* and *recombination lines* commonly observed in ionized nebulae.
+`AtomNeb-idl <https://atomneb.github.io/AtomNeb-idl>` is an IDL library for reading atomic data from the `AtomNeb` database for *collisionally excited lines* and *recombination lines* commonly observed in ionized nebulae.
 
 * `AtomNeb database for collisionally excited lines` contains energy levels (Ej), collision strengths (Ωij), and transition probabilities (Aij) of the most ions commonly observed in ionized nebulae:
 

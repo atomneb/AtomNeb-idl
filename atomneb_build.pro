@@ -1,5 +1,5 @@
 ;+
-; Builds the proequib sav file.
+; Builds the atomneb sav file.
 ;-
 
 ; clear any other compilations
