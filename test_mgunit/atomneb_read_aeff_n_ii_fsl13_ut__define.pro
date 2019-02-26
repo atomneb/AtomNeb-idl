@@ -20,5 +20,5 @@ end
 pro atomneb_read_aeff_n_ii_fsl13_ut__define
   compile_opt strictarr
   
-  define = { atomneb_read_aeff_n_ii_fsl13_ut, inherits MGutLibTestCase }
+  define = { atomneb_read_aeff_n_ii_fsl13_ut, inherits AtomNebUTTestCase}
 end

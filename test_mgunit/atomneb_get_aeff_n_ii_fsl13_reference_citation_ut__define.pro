@@ -20,5 +20,5 @@ end
 pro atomneb_get_aeff_n_ii_fsl13_reference_citation_ut__define
   compile_opt strictarr
   
-  define = { atomneb_get_aeff_n_ii_fsl13_reference_citation_ut, inherits MGutLibTestCase }
+  define = { atomneb_get_aeff_n_ii_fsl13_reference_citation_ut, inherits AtomNebUTTestCase}
 end

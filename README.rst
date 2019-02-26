@@ -21,13 +21,14 @@ AtomNeb (IDL/GDL)
 Description
 ============
 
-**AtomNeb-idl** is an `IDL <http://www.harrisgeospatial.com/ProductsandSolutions/GeospatialProducts/IDL.aspx>`_/`GDL <http://gnudatalanguage.sourceforge.net/>`_ library for reading atomic data from the `AtomNeb` database for *collisionally excited lines* and *recombination lines* typically observed in spectra of ionized gaseous nebulae.
+**AtomNeb-idl** is a library written in `Interactive Data Language <http://www.harrisgeospatial.com/ProductsandSolutions/GeospatialProducts/IDL.aspx>`_ (IDL)/`GNU Data Language <http://gnudatalanguage.sourceforge.net/>`_ (GDL) for reading atomic data from `AtomNeb`, which is a database containing atomic data stored in the Flexible Image Transport System (FITS) file format for *collisionally excited lines* and *recombination lines* typically observed in spectra of ionized gaseous nebulae. The **AtomNeb** database were generated for use in `proEQUIB <https://github.com/equib/proEQUIB>`_, `pyEQUIB <https://github.com/equib/pyEQUIB>`_, and other nebular spectral analysis tools. 
+
 
 
 Collisionally Excited Lines
 ---------------------------
 
-The **AtomNeb** database for *collisionally excited lines*  contains sets of `atomic datasets <https://github.com/atomneb/AtomNeb-idl/tree/master/atomic-data>`_, which were generated for use in `proEQUIB <https://github.com/equib/proEQUIB>`_, `pyEQUIB <https://github.com/equib/pyEQUIB>`_, and other nebular spectral analysis tools. They include energy levels (Ej), collision strengths (Ωij), and transition probabilities (Aij) of the most ions commonly observed in ionized nebulae.
+**AtomNeb for collisionally excited lines**  contains sets of `atomic datasets <https://github.com/atomneb/AtomNeb-idl/tree/master/atomic-data>`_, which include energy levels (Ej), collision strengths (Ωij), and transition probabilities (Aij) of the most ions commonly observed in ionized nebulae.
 
 The atomic datasets for collisionally excited lines are as follows:
 
@@ -52,7 +53,7 @@ Each dataset contains the following `atomic data FITS files <https://github.com/
 Recombination Lines
 -------------------
 
-The **AtomNeb** database for *recombination lines* contains sets of `recombination coefficients <https://github.com/atomneb/AtomNeb-idl/tree/master/atomic-data-rc>`_, which were generated for use in `proEQUIB <https://github.com/equib/proEQUIB>`_, `pyEQUIB <https://github.com/equib/pyEQUIB>`_, and other nebular spectral analysis tools. They include effective recombination coefficient (αeff) of recombination lines of H I, He I, He II, C I, C II, C III, C VI, N II, N III, N IV, N V, N VI, N VII, O II, O III, O IV, O V, O VI, O VIII, and Ne II ions typically observed in ionized nebulae, as well as Branching ratios (Br) of O II and N II lines.
+**AtomNeb for recombination lines** contains sets of `recombination coefficients <https://github.com/atomneb/AtomNeb-idl/tree/master/atomic-data-rc>`_, which include effective recombination coefficient (αeff) of recombination lines of H I, He I, He II, C I, C II, C III, C VI, N II, N III, N IV, N V, N VI, N VII, O II, O III, O IV, O V, O VI, O VIII, and Ne II ions typically observed in ionized nebulae, as well as Branching ratios (Br) of O II and N II lines.
 
 The atomic datasets for recombination lines are as follows:
 
@@ -84,6 +85,10 @@ Dependent IDL Packages
 
         git clone --recursive https://github.com/atomneb/AtomNeb-idl
 
+* If you plan to use the recen O II recombination coefficients (`Storey, Sochi and Bastin 2017 <http://adsabs.harvard.edu/abs/2017MNRAS.470..379S>`_), you need to unpack them::
+
+        cd AtomNeb-idl/atomic-data-rc/
+        tar -xvf *.fits.tar.gz
 
 Installation in IDL
 -------------------

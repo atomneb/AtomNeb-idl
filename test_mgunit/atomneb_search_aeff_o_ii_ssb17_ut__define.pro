@@ -20,5 +20,5 @@ end
 pro atomneb_search_aeff_o_ii_ssb17_ut__define
   compile_opt strictarr
   
-  define = { atomneb_search_aeff_o_ii_ssb17_ut, inherits MGutLibTestCase }
+  define = { atomneb_search_aeff_o_ii_ssb17_ut, inherits AtomNebUTTestCase}
 end

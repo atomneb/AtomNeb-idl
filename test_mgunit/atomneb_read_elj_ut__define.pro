@@ -18,5 +18,5 @@ end
 pro atomneb_read_elj_ut__define
   compile_opt strictarr
   
-  define = { atomneb_read_elj_ut, inherits MGutLibTestCase }
+  define = { atomneb_read_elj_ut, inherits AtomNebUTTestCase}
 end

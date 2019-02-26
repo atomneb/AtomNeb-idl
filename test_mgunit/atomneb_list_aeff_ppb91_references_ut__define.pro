@@ -18,5 +18,5 @@ end
 pro atomneb_list_aeff_ppb91_references_ut__define
   compile_opt strictarr
   
-  define = { atomneb_list_aeff_ppb91_references_ut, inherits MGutLibTestCase }
+  define = { atomneb_list_aeff_ppb91_references_ut, inherits AtomNebUTTestCase}
 end

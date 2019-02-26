@@ -18,5 +18,5 @@ end
 pro atomneb_list_omij_references_ut__define
   compile_opt strictarr
   
-  define = { atomneb_list_omij_references_ut, inherits MGutLibTestCase }
+  define = { atomneb_list_omij_references_ut, inherits AtomNebUTTestCase}
 end
