@@ -24,9 +24,12 @@ bibliography: paper.bib
 
 # Summary
 
-An ionized gaseous nebula can be used as an astrophysical tool to trace the chemical 
+Ionized gaseous nebulae are interstellar clouds of hydrogen-rich materials, 
+which are photo-ionized by ultraviolet radiation from stars, making them 
+visible in multi-wavelength bands. Ionized nebulae can be used as an astrophysical tool to trace the chemical 
 composition of the interstellar medium in our Galaxy and other galaxies, 
-and to study mixing processes in stellar evolution. Electron temperatures, electron densities, 
+and to study mixing processes in stellar evolution. Spectra emitted from 
+ionized nebulae generally contain collisionally excited and recombination lines. Electron temperatures, electron densities, 
 and ionic abundances can be determined from _collisionally excited lines_ (CEL) by solving statistical 
 equilibrium equations using collision strengths ($\Omega_{ij}$) and transition probabilities ($A_{ij}$) of ions. 
 Moreover, physical conditions and chemical abundances can be calculated from 
@@ -64,7 +67,7 @@ which were compiled according to the atomic data used in the FORTRAN program ``M
 the atomic data used in the Python package ``pyNeb`` for spectral analysis (@Luridiana:2015).
 
 - The API functions for the _RL atomic data_ developed in IDL were designed to provide easy access to 
-_recombination coefficients_ ($\alpha_{\rm eff}$) and _branching ratios_ ($Br$) of recombination lines 
+_effective recombination coefficients_ ($\alpha_{\rm eff}$) and _branching ratios_ ($Br$) of recombination lines 
 of given ions. The RL data include effective recombination 
 coefficients for C II (@Davey:2000), N II (@Escalante:1990), 
 O II (@Storey:1994; @Liu:1995), and Ne II (@Kisielius:1998), which were 

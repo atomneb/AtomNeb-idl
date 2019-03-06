@@ -1,6 +1,6 @@
-=======
-AtomNeb (IDL/GDL)
-=======
+===================
+AtomNeb IDL Library
+===================
     
 .. image:: https://travis-ci.org/atomneb/AtomNeb-idl.svg?branch=master
     :target: https://travis-ci.org/atomneb/AtomNeb-idl
