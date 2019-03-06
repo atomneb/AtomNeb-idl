@@ -18,6 +18,14 @@ AtomNeb IDL Library
     :target: https://github.com/atomneb/AtomNeb-idl/blob/master/LICENSE
     :alt: GitHub license
 
+.. image:: https://zenodo.org/badge/DOI/10.5281/zenodo.2584420.svg
+    :target: https://doi.org/10.5281/zenodo.2584420
+    :alt: Zenodo
+
+.. image:: http://joss.theoj.org/papers/10.21105/joss.00898/status.svg
+    :target: https://doi.org/10.21105/joss.00898
+    :alt: JOSS
+
 Description
 ============
 
@@ -131,4 +139,9 @@ Documentation
 
 For more information on how to use the API functions from the AtomNeb IDL libray, please read the `API Documentation  <https://atomneb.github.io/AtomNeb-idl/doc>`_ published on `atomneb.github.io/AtomNeb-idl <https://atomneb.github.io/AtomNeb-idl>`_.
 
+
+References
+==========
+
+* Danehkar, A. (2019). AtomNeb: IDL Library for Atomic Data of Ionized Nebulae. *J. Open Source Softw.*, **4**, 898. doi:`10.21105/joss.00898 <https://doi.org/10.21105/joss.00898>`_
 
