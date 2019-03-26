@@ -14,7 +14,7 @@ AtomNeb IDL Library
     :target: http://mybinder.org/repo/atomneb/atomneb-idl
     :alt: Binder
 
-.. image:: https://img.shields.io/aur/license/yaourt.svg
+.. image:: https://img.shields.io/badge/license-GPL-blue.svg
     :target: https://github.com/atomneb/AtomNeb-idl/blob/master/LICENSE
     :alt: GitHub license
 
