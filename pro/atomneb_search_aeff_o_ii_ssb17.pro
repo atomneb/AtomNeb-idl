@@ -110,10 +110,14 @@ function atomneb_search_aeff_o_ii_ssb17, Atom_RC_file, atom, ion, case1, wavelen
      if ii_length gt 1 then begin
        ii_min=min(abs(element_data_list[ii].wavelength-wavelength))
        ii=where(abs(element_data_list.wavelength-wavelength) eq ii_min and element_data_list.case1 eq case1) 
-       temp=size(ii,/DIMENSIONS)
-       ii_length=temp[0]
+       ii_length=1
      endif
   endelse
+  ;if ii_length gt 1 then begin
+  ;  value_min=abs(min(element_data_list[ii].wavelength-wavelength))
+  ;  ii=where(abs(element_data_list.wavelength-wavelength) eq value_min)
+  ;  ii_length=1
+  ;endif
   Extention1=element_data_list[ii].Extention
   Wavelength1=element_data_list[ii].wavelength
   

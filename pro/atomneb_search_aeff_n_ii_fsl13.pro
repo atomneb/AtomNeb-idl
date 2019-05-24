@@ -102,7 +102,7 @@ function atomneb_search_aeff_n_ii_fsl13, Atom_RC_file, atom, ion, wavelength
 ;-  
   element_data_list=atomneb_read_aeff_n_ii_fsl13_list(Atom_RC_file)
   
-  ii=where(element_data_list.wavelength eq wavelength)
+  ii=where(abs(element_data_list.wavelength-wavelength) lt 0.025)
   
   temp=size(ii,/DIMENSIONS)
   ii_length=temp[0]
@@ -111,6 +111,11 @@ function atomneb_search_aeff_n_ii_fsl13, Atom_RC_file, atom, ion, wavelength
       print, 'could not find the given wavelength'
       exit
     endif
+  endif
+  if ii_length gt 1 then begin
+    value_min=abs(min(element_data_list[ii].wavelength-wavelength))
+    ii=where(abs(element_data_list.wavelength-wavelength) eq value_min)
+    ii_length=1
   endif
   Extention1=element_data_list[ii].Extention
   Wavelength1=element_data_list[ii].wavelength
