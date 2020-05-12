@@ -14,7 +14,7 @@
 function atomneb_version, full=full
   compile_opt strictarr, hidden
 
-  version = '0.0.2'
+  version = '0.2.0'
   revision = '-01e74b37'
 
   return, version + (keyword_set(full) ? (' ' + revision) : '')
