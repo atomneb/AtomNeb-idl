@@ -146,7 +146,7 @@ How to Use
 
 The Documentation of the IDL functions provides in detail in the *API Documentation* (`atomneb.github.io/AtomNeb-idl/doc <https://atomneb.github.io/AtomNeb-idl/doc>`_). There are two main categories: *collisionally excited lines (CEL)* and *recombination lines (RC)*.
 
-* The atomic database for **collisionally excited lines (CEL)** which contain Energy Levels (Ej), Collision Strengths (Ωij), and Transition Probabilities (Aij). We have four atomic datasets for them: `collection <https://github.com/atomneb/AtomNeb-idl/tree/master/atomic-data/collection>`_, `chianti52 <https://github.com/atomneb/AtomNeb-idl/tree/master/atomic-data/chianti52>`_, `chianti60 <https://github.com/atomneb/AtomNeb-idl/tree/master/atomic-data/chianti60>`_, and `chianti70 <https://github.com/atomneb/AtomNeb-idl/tree/master/atomic-data/chianti70>`_. 
+* The atomic data for **collisionally excited lines (CEL)** contain Energy Levels (Ej), Collision Strengths (Ωij), and Transition Probabilities (Aij). We have four atomic datasets for them: `collection <https://github.com/atomneb/AtomNeb-idl/tree/master/atomic-data/collection>`_, `chianti52 <https://github.com/atomneb/AtomNeb-idl/tree/master/atomic-data/chianti52>`_, `chianti60 <https://github.com/atomneb/AtomNeb-idl/tree/master/atomic-data/chianti60>`_, and `chianti70 <https://github.com/atomneb/AtomNeb-idl/tree/master/atomic-data/chianti70>`_. 
     
     You need to load the **atomneb** object class, and choose either *collection*, *chianti52*, *chianti60* or *chianti70* as follows::
     
@@ -194,7 +194,7 @@ The Documentation of the IDL functions provides in detail in the *API Documentat
         
          0.0000   2.5969e-05       0.0000   2.3220e-06      ...
     
-* Theatomic database for **recombination lines (RC)** which contain effective recombination coefficients (αeff) of recombination lines for different collections: `RC Collection <https://github.com/atomneb/AtomNeb-idl/tree/master/atomic-data-rc>`_, `SH95 Collection <https://github.com/atomneb/AtomNeb-idl/tree/master/atomic-data-rc>`_, `PPB91 Collection <https://github.com/atomneb/AtomNeb-idl/tree/master/atomic-data-rc>`_, `PFSD12 He I data <https://github.com/atomneb/AtomNeb-idl/tree/master/atomic-data-rc>`_, `FSL13 N II data <https://github.com/atomneb/AtomNeb-idl/tree/master/atomic-data-rc>`_, and `SSB17 O II data <https://github.com/atomneb/AtomNeb-idl/tree/master/atomic-data-rc>`_.
+* The atomic data for **recombination lines (RC)** contain effective recombination coefficients (αeff) of emission lines from different collections: `RC Collection <https://github.com/atomneb/AtomNeb-idl/tree/master/atomic-data-rc>`_, `SH95 Collection <https://github.com/atomneb/AtomNeb-idl/tree/master/atomic-data-rc>`_, `PPB91 Collection <https://github.com/atomneb/AtomNeb-idl/tree/master/atomic-data-rc>`_, `PFSD12 He I data <https://github.com/atomneb/AtomNeb-idl/tree/master/atomic-data-rc>`_, `FSL13 N II data <https://github.com/atomneb/AtomNeb-idl/tree/master/atomic-data-rc>`_, and `SSB17 O II data <https://github.com/atomneb/AtomNeb-idl/tree/master/atomic-data-rc>`_.
     
     You need to load the **atomneb** object class::
     
