@@ -62,62 +62,11 @@ function atomneb_read_aeff_o_ii_ssb17, Atom_RC_file, atom, ion, case1, wavelengt
 ;   This library is released under a GNU General Public License.
 ;
 ; :Version:
-;   0.0.1
+;   0.2.0
 ;
 ; :History:
 ;     03/07/2017, IDL code by A. Danehkar
 ;-
-
-;+
-; NAME:
-;     atomneb_read_aeff_o_ii_ssb17
-;
-; PURPOSE:
-;     This function returns the effective recombination coefficients (Aeff) from the table extensions
-;     of the FITS data file ('rc_o_iii_SSB17.fits').
-;
-; CALLING SEQUENCE:
-;     aeff_data=atomneb_read_aeff_o_ii_ssb17(Atom_RC_file, atom, ion, case1, wavelength_range, wavelength=wavelength, reference=reference)
-;
-; INPUTS:
-;     Atom_RC_file     : in, required, type=string, the FITS data file name ('rc_o_iii_SSB17.fits')
-;     Atom             : in, required, type=string, atom name e.g. 'n'
-;     Ion              : in, required, type=string, ionic level e.g 'iii'
-;     case1            : in, type=string, set for the case 'a' or 'b', defualt 'b'
-;     Wavelength_range : in, required, type=array, wavelength range e.g. [5320.0, 5330.0]
-;
-; KEYWORD PARAMETERS:
-;     WAVELENGTH    : in, type=boolean, set for returning the wavelengths
-;     REFERENCE     : in, type=string, set for the reference, not necessary
-;
-; OUTPUTS:  This function returns an array data of the effective recombination coefficients.
-;
-; PROCEDURE: This function calls atomneb_read_aeff_n_ii_fsl13_list and
-;            ftab_ext from IDL Astronomy User's library (../externals/astron/pro).
-;
-; EXAMPLE:
-;     base_dir = file_dirname(file_dirname((routine_info('$MAIN$', /source)).path))
-;     data_rc_dir = ['atomic-data-rc']
-;     Atom_RC_file= filepath('rc_o_iii_SSB17.fits', root_dir=base_dir, subdir=data_dir )
-;     atom='o'
-;     ion='iii' ; O II
-;     case1='B'
-;     wavelength_range=[5320.0, 5330.0] 
-;     oii_rc_data=atomneb_read_aeff_o_ii_ssb17(Atom_RC_file, atom, ion, case1, wavelength_range)
-;     oii_rc_data_wave=atomneb_read_aeff_o_ii_ssb17(Atom_RC_file, atom, ion, case1, wavelength_range, /wavelength)
-;     print,oii_rc_data[0].Aeff
-;     > 1.64100e-30  1.60000e-30  1.56400e-30  1.54100e-30 ...
-;     temp=size(oii_rc_data_wave.Wavelength,/DIMENSIONS)
-;     n_line=temp[0]
-;     for i=0,n_line-1 do print,oii_rc_data_wave[i].Wavelength, oii_rc_data_wave[i].lower_term, oii_rc_data_wave[i].upper_term
-;     > 5327.172s22p2(1S)3p 2Po
-;     > 5325.422s22p2(1S)3p 2Po
-;     > 5327.182s22p2(1D)3d 2Ge
-;     > ...
-;
-; MODIFICATION HISTORY:
-;     03/07/2017, IDL code by A. Danehkar
-;- 
   element_data_list=atomneb_read_aeff_o_ii_ssb17_list(Atom_RC_file)
   wave_min=min(wavelength_range)
   wave_max=max(wavelength_range)

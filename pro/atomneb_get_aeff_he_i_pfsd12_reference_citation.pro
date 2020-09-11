@@ -47,50 +47,11 @@ function atomneb_get_aeff_he_i_pfsd12_reference_citation, Atom_RC_file, atom, io
 ;   This library is released under a GNU General Public License.
 ;
 ; :Version:
-;   0.0.1
+;   0.2.0
 ;
 ; :History:
 ;     15/01/2017, IDL code by A. Danehkar
 ;-
-
-;+
-; NAME:
-;     atomneb_get_aeff_he_i_pfsd12_reference_citation
-;     
-; PURPOSE:
-;     This function returns the reference citation for a recombination coefficient (Aeff)
-;     from the 2nd binary table extension of the FITS data file ('rc_he_ii_PFSD12.fits').
-;
-; CALLING SEQUENCE:
-;     citation=atomneb_get_aeff_he_i_pfsd12_reference_citation(Atom_RC_file, atom, ion, reference=reference)
-; 
-; INPUTS:
-;     Atom_RC_file  : in, required, type=string, the FITS data file name ('rc_he_ii_PFSD12.fits')
-;     Atom          : in, required, type=string, atom name e.g. 'he'
-;     Ion           : in, required, type=string, ionic level e.g 'ii'
-;     
-; KEYWORD PARAMETERS:
-;     REFERENCE     : in, type=string, set for the reference e.g. 'PFSD13', may not necessary
-;     
-; OUTPUTS:  This function returns a string as the Citation.
-; 
-; PROCEDURE: This function calls atomneb_read_aeff_he_i_pfsd12_references and 
-;            ftab_ext from IDL Astronomy User's library (../externals/astron/pro).
-; 
-; EXAMPLE:
-;     base_dir = file_dirname(file_dirname((routine_info('$MAIN$', /source)).path))
-;     data_dir = ['atomic-data-rc']
-;     Atom_RC_file= filepath('rc_he_ii_PFSD12.fits', root_dir=base_dir, subdir=data_dir )
-;     atom='he'
-;     ion='ii' ; He I
-;     reference='PFSD13'
-;     citation=atomneb_get_aeff_he_i_pfsd12_reference_citation(Atom_RC_file, atom, ion, reference=reference)
-;     print, citation
-;     > Porter, R. L., Ferland, G. J., Storey, P. J. and Detisch, M. J., MNRAS, 433L, 89, 2013
-;
-; MODIFICATION HISTORY:
-;     15/01/2017, IDL code by A. Danehkar
-;-  
   reference_template={Reference:'', Citation: ''}
   
   element_data_reference=atomneb_read_aeff_he_i_pfsd12_references(Atom_RC_file)

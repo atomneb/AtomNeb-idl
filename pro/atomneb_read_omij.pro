@@ -56,58 +56,11 @@ function atomneb_read_omij, Atom_Omij_file, atom, ion, reference=reference, leve
 ;   This library is released under a GNU General Public License.
 ;
 ; :Version:
-;   0.0.1
+;   0.2.0
 ;
 ; :History:
 ;     24/12/2015, IDL code by A. Danehkar
 ;-
-
-;+
-; NAME:
-;     atomneb_read_omij
-;
-; PURPOSE:
-;     This function returns the collision strengths (omega_ij) from the table extensions
-;     of the FITS data file ('AtomOmij.fits').
-;
-; CALLING SEQUENCE:
-;     omij_data=atomneb_read_omij(Atom_Omij_file, atom, ion, reference=reference, level_num=level_num)
-;
-; INPUTS:
-;     Atom_Elj_file : in, required, type=string, the FITS data file name ('AtomOmij.fits')
-;     Atom          : in, required, type=string, atom name e.g. 'o'
-;     Ion           : in, required, type=string, ionic level e.g 'iii'
-;
-; KEYWORD PARAMETERS:
-;     REFERENCE     : in, type=string, set for the reference e.g. 'SSB14'
-;     LEVEL_NUM     : in, type=string, set for the maximum level number.
-;
-; OUTPUTS:  This function returns an array data of the omij_data:
-;          { level1:0, 
-;            level2:0, 
-;            strength:dblarr(temp_steps)}.
-;
-; PROCEDURE: This function calls atomneb_read_omij_list and
-;            ftab_ext from IDL Astronomy User's library (../externals/astron/pro).
-;
-; EXAMPLE:
-;     base_dir = file_dirname(file_dirname((routine_info('$MAIN$', /source)).path))
-;     data_dir = ['atomic-data', 'collection']
-;     Atom_Omij_file = filepath('AtomOmij.fits', root_dir=base_dir, subdir=data_dir )
-;     atom='o'
-;     ion='iii'
-;     reference='SSB14'
-;     oiii_omij_data=atomneb_read_omij(Atom_Omij_file, atom, ion, reference=reference)
-;     print,oiii_omij_data.level1
-;     > 0       1       1       1       1       2       2       2       3       3       4
-;     print,oiii_omij_data.level2
-;     > 0       2       3       4       5       3       4       5       4       5       5
-;     print,oiii_omij_data[0].strength
-;     > 100.00000       125.89254       158.48932       199.52623       251.18864       ...
-;
-; MODIFICATION HISTORY:
-;     24/12/2015, IDL code by A. Danehkar
-;-  
   element_data_list=atomneb_read_omij_list(Atom_Omij_file)
   if keyword_set(reference) eq 1 then begin
     atom_ion_name=strlowcase(atom)+'_'+strlowcase(ion)+'_omij_'+reference

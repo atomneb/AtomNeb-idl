@@ -30,37 +30,11 @@ function atomneb_read_omij_references, Atom_Omij_file
 ;   This library is released under a GNU General Public License.
 ;
 ; :Version:
-;   0.0.1
+;   0.2.0
 ;
 ; :History:
 ;     24/12/2015, IDL code by A. Danehkar
 ;-
-
-;+
-; NAME:
-;     atomneb_read_omij_references
-;
-; PURPOSE:
-;     This function returns the reference list of energy levels (Ej) from the 2nd binary table extension
-;     of the FITS data file ('AtomElj.fits').
-;
-; CALLING SEQUENCE:
-;     omij_data_reference=atomneb_read_omij_references(Atom_Omij_file)
-;
-; INPUTS:
-;     Atom_Omij_file  : in, required, type=string, the FITS data file name ('AtomOmij.fits')
-;
-; OUTPUTS:  This function returns an array data of the aij_data_reference
-;          { Reference:'',
-;            Citation:''}
-;
-; PROCEDURE: This function is called by atomneb_get_omij_reference_citation. 
-;            This function calls ftab_ext from IDL Astronomy User's library (../externals/astron/pro).
-;
-; MODIFICATION HISTORY:
-;     24/12/2015, IDL code by A. Danehkar
-;-
-
   reference_template={Reference:'', Citation: ''}
   
   ftab_ext,Atom_Omij_file,[1,2],Reference,Citation,EXTEN_NO =2

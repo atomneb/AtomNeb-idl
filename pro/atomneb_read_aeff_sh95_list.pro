@@ -30,34 +30,9 @@ function atomneb_read_aeff_sh95_list, Atom_RC_file
 ;   This library is released under a GNU General Public License.
 ;
 ; :Version:
-;   0.0.1
+;   0.2.0
 ;
 ; :History:
-;     15/01/2017, IDL code by A. Danehkar
-;-
-
-;+
-; NAME:
-;     atomneb_read_aeff_sh95_list
-;
-; PURPOSE:
-;     This function returns the list of effective recombination coefficients (Aeff) from the 1st binary table extension
-;     of the FITS data file ('rc_SH95.fits')
-;
-; CALLING SEQUENCE:
-;     aeff_data=atomneb_read_aeff_sh95_list(Atom_RC_file)
-;
-; INPUTS:
-;     Atom_RC_file  : in, required, type=string, the FITS data file name ('rc_SH95.fits')
-;
-; OUTPUTS:  This function returns an array data of the aeff_data_list: 
-;          { Aeff_Data:'', 
-;            Extention:0.0}
-;
-; PROCEDURE: This function is called by atomneb_read_aeff_ppb91. This function calls 
-;            ftab_ext from IDL Astronomy User's library (../externals/astron/pro).
-;
-; MODIFICATION HISTORY:
 ;     15/01/2017, IDL code by A. Danehkar
 ;-
   element_template={Aeff_Data:'', Extention:0}

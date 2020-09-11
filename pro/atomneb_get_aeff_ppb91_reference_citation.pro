@@ -46,47 +46,9 @@ function atomneb_get_aeff_ppb91_reference_citation, Atom_RC_file, atom, ion, ref
 ;   This library is released under a GNU General Public License.
 ;
 ; :Version:
-;   0.0.1
+;   0.2.0
 ;
 ; :History:
-;     15/01/2017, IDL code by A. Danehkar
-;-
-
-;+
-; NAME:
-;     atomneb_get_aeff_ppb91_reference_citation
-;
-; PURPOSE:
-;     This function returns the reference citation for a recombination coefficient (Aeff)
-;     from the 2nd binary table extension of the FITS data file ('rc_PPB91.fits').
-;
-; CALLING SEQUENCE:
-;     citation=atomneb_get_aeff_ppb91_reference_citation(Atom_RC_file, atom, ion, reference=reference)
-;
-; INPUTS:
-;     Atom_RC_file  : in, required, type=string, the FITS data file name ('rc_PPB91.fits')
-;     Atom          : in, required, type=string, atom name e.g. 'c'
-;     Ion           : in, required, type=string, ionic level e.g 'iii'
-;
-; KEYWORD PARAMETERS:
-;     REFERENCE     : in, type=string, set for the reference, not necessary
-;
-; OUTPUTS:  This function returns a string as the Citation.
-;
-; PROCEDURE: This function calls atomneb_read_aeff_o_ii_ssb17_references and 
-;            ftab_ext from IDL Astronomy User's library (../externals/astron/pro).
-;
-; EXAMPLE:
-;     base_dir = file_dirname(file_dirname((routine_info('$MAIN$', /source)).path))
-;     data_dir = ['atomic-data-rc']
-;     Atom_RC_file= filepath('rc_PPB91.fits', root_dir=base_dir, subdir=data_dir )
-;     atom='c'
-;     ion='iii'
-;     citation=atomneb_get_aeff_ppb91_reference_citation(Atom_RC_file, atom, ion)
-;     print, citation
-;     > Pequignot, D., Petitjean, P. and Boisson, C. Astron.Astrophys., 251, 680, 1991
-;
-; MODIFICATION HISTORY:
 ;     15/01/2017, IDL code by A. Danehkar
 ;-
   reference_template={Reference:'', Citation: ''}

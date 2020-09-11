@@ -45,48 +45,11 @@ function atomneb_get_omij_reference_citation, Atom_Omij_file, atom, ion, referen
 ;   This library is released under a GNU General Public License.
 ;
 ; :Version:
-;   0.0.1
+;   0.2.0
 ;
 ; :History:
 ;     24/12/2015, IDL code by A. Danehkar
 ;-
-
-;+
-; NAME:
-;     atomneb_get_omij_reference_citation
-;
-; PURPOSE:
-;     This function returns the reference citation for collision strengths (Omega_ij)
-;     from the 2nd binary table extension of the FITS data file ('AtomOmij.fits').
-;
-; CALLING SEQUENCE:
-;     citation=atomneb_get_omij_reference_citation(Atom_Elj_file, atom, ion, reference)
-;
-; INPUTS:
-;     Atom_Omij_file: in, required, type=string, the FITS data file name ('AtomOmij.fits')
-;     Atom          : in, required, type=string, atom name e.g. 'o'
-;     Ion           : in, required, type=string, ionic level e.g 'iii'
-;     Reference     : in, type=string, set for the reference e.g. 'SSB14'
-;
-; OUTPUTS:  This function returns a string as the Citation.
-;
-; PROCEDURE: This function calls atomneb_read_omij_references and 
-;            ftab_ext from IDL Astronomy User's library (../externals/astron/pro).
-;
-; EXAMPLE:
-;     base_dir = file_dirname(file_dirname((routine_info('$MAIN$', /source)).path))
-;     data_dir = ['atomic-data', 'collection']
-;     Atom_Omij_file = filepath('AtomOmij.fits', root_dir=base_dir, subdir=data_dir )
-;     atom='o'
-;     ion='iii'
-;     reference='SSB14'
-;     citation=atomneb_get_omij_reference_citation(Atom_Omij_file, atom, ion, reference)
-;     print,citation
-;     > Storey, P. J., Sochi, T., and Badnell, N. R. 2014, Astron.Astrophys., 441, 3028
-;
-; MODIFICATION HISTORY:
-;     24/12/2015, IDL code by A. Danehkar
-;- 
   reference_template={Reference:'', Citation: ''}
   
   element_data_reference=atomneb_read_omij_references(Atom_Omij_file)

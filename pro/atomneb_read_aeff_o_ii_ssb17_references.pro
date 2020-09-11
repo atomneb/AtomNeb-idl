@@ -30,34 +30,9 @@ function atomneb_read_aeff_o_ii_ssb17_references, Atom_RC_file
 ;   This library is released under a GNU General Public License.
 ;
 ; :Version:
-;   0.0.1
+;   0.2.0
 ;
 ; :History:
-;     03/07/2017, IDL code by A. Danehkar
-;-
-
-;+
-; NAME:
-;     atomneb_read_aeff_o_ii_ssb17_references
-;
-; PURPOSE:
-;     This function returns the reference list of recombination coefficients (Aeff) from the 2nd binary table extension
-;     of the FITS data file ('rc_o_iii_SSB17.fits').
-;
-; CALLING SEQUENCE:
-;     aeff_data=atomneb_read_aeff_o_ii_ssb17_references(Atom_RC_file)
-;
-; INPUTS:
-;     Atom_RC_file  : in, required, type=string, the FITS data file name ('rc_o_iii_SSB17.fits')
-;
-; OUTPUTS:  This function returns an array data of the aeff_data_reference
-;          { Reference:'',
-;            Citation:''}
-;
-; PROCEDURE: This function is called by atomneb_get_aeff_o_ii_ssb17_reference_citation. 
-;            This function calls ftab_ext from IDL Astronomy User's library (../externals/astron/pro).
-;
-; MODIFICATION HISTORY:
 ;     03/07/2017, IDL code by A. Danehkar
 ;-
   reference_template={Reference:'', Citation: ''}
