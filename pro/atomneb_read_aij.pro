@@ -77,10 +77,10 @@ function atomneb_read_aij, Atom_Aij_file, atom, ion, reference=reference, level_
     endif
     ii=min(iii)
   endelse
-  Extention=element_data_list[ii].Extention
+  Extension=element_data_list[ii].Extension
   
-  fits_read,Atom_Aij_file,Aij,header1,EXTEN_NO =Extention 
-  ;ftab_ext,Atom_Aij_file,Aij,EXTEN_NO =Extention
+  fits_read,Atom_Aij_file,Aij,header1,EXTEN_NO =Extension 
+  ;ftab_ext,Atom_Aij_file,Aij,EXTEN_NO =Extension
   temp=size(Aij,/DIMENSIONS)
   n_level=temp[0]
   aij_template={Aij:dblarr(n_level,n_level)}

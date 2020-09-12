@@ -84,9 +84,9 @@ function atomneb_read_aeff_sh95, Atom_RC_file, atom, ion, reference=reference, c
     ii=min(iii)
   endelse
 
-  Extention=element_data_list[ii].Extention
+  Extension=element_data_list[ii].Extension
  
-  fits_read,Atom_RC_file,rc_aeff,header1,EXTEN_NO =Extention 
+  fits_read,Atom_RC_file,rc_aeff,header1,EXTEN_NO =Extension 
   temp=size(rc_aeff,/DIMENSIONS)
   col1=temp[0]
   row1=temp[1]

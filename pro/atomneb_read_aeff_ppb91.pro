@@ -86,9 +86,9 @@ function atomneb_read_aeff_ppb91, Atom_RC_file, atom, ion, reference=reference
     ii=min(iii)
   endelse
 
-  Extention=element_data_list[ii].Extention
+  Extension=element_data_list[ii].Extension
  
-  ftab_ext,Atom_RC_file,[1,2,3,4,5,6,7,8,9,10],Ion,Case1,Wavelength,a,b,c,d,br,Q,y,EXTEN_NO =Extention
+  ftab_ext,Atom_RC_file,[1,2,3,4,5,6,7,8,9,10],Ion,Case1,Wavelength,a,b,c,d,br,Q,y,EXTEN_NO =Extension
   rc_template={Ion:'', Case1: '', Wavelength: double(0.0), a: double(0.0), b:double(0.0), c: double(0.0), d:double(0.0), br:double(0.0), Q:'', Y:double(0.0)}
   
   temp=size(Wavelength,/DIMENSIONS)

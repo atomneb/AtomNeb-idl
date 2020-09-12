@@ -9,7 +9,7 @@ function atomneb_read_aeff_n_ii_fsl13_list, Atom_RC_file
 ;
 ; :Returns:
 ;    type=an array of data. This function returns the aeff_data_list: 
-;          {Aeff_Data:'',  Extention:0, $
+;          {Aeff_Data:'',  Extension:0, $
 ;           IND:long(0), Wavelength: float(0.0), $
 ;           Tr:'',  Trans: '', T_X: ''}
 ;
@@ -36,18 +36,18 @@ function atomneb_read_aeff_n_ii_fsl13_list, Atom_RC_file
 ; :History:
 ;     03/07/2017, IDL code by A. Danehkar
 ;-
-  element_template={Aeff_Data:'',  Extention:0, $
+  element_template={Aeff_Data:'',  Extension:0, $
                        IND:long(0), Wavelength: float(0.0), $
                        Tr:'',  Trans: '', T_X: ''}
                        
-  ftab_ext,Atom_RC_file,[1,2,3,4,5,6],Aeff_Data,Extention,IND,Wavelength,Tr,Trans,EXTEN_NO =1
+  ftab_ext,Atom_RC_file,[1,2,3,4,5,6],Aeff_Data,Extension,IND,Wavelength,Tr,Trans,EXTEN_NO =1
   temp=size(Aeff_Data,/DIMENSIONS)
   element_length=temp[0]
   
   element_data=replicate(element_template, element_length)
   for i=0, element_length-1 do begin 
      element_data[i].Aeff_Data=strtrim(Aeff_Data[i],2)
-     element_data[i].Extention=Extention[i]
+     element_data[i].Extension=Extension[i]
      element_data[i].IND=IND[i]
      element_data[i].Wavelength=Wavelength[i]
      element_data[i].Tr=strtrim(Tr[i],2)

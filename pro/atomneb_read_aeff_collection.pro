@@ -131,14 +131,14 @@ function atomneb_read_aeff_collection, Atom_RC_file, atom, ion, br=br, reference
     ii=min(iii)
   endelse
 
-  Extention=element_data_list[ii].Extention
+  Extension=element_data_list[ii].Extension
   
   atom_ion_name=strlowcase(atom)+'_'+strlowcase(ion)+prefix
   
 
 case atom_ion_name of
    'c_iii_aeff': begin
-        ftab_ext,Atom_RC_file,[1,2,3,4,5,6],Wavelength,a,b,c,d,f,EXTEN_NO =Extention
+        ftab_ext,Atom_RC_file,[1,2,3,4,5,6],Wavelength,a,b,c,d,f,EXTEN_NO =Extension
         rc_template={Wavelength: double(0.0), a: double(0.0), b:double(0.0), c: double(0.0), d:double(0.0), f:double(0.0)}
         
         temp=size(Wavelength,/DIMENSIONS)
@@ -154,7 +154,7 @@ case atom_ion_name of
         rc_data[*].f=f[*]
       end
    'n_iii_aeff': begin
-        ftab_ext,Atom_RC_file,[1,2,3],a,b,c,EXTEN_NO =Extention
+        ftab_ext,Atom_RC_file,[1,2,3],a,b,c,EXTEN_NO =Extension
         rc_template={a:double(0.0), b:double(0.0), c:double(0.0)}  
         
         temp=size(a,/DIMENSIONS)
@@ -167,7 +167,7 @@ case atom_ion_name of
         rc_data[*].c=c[*]
       end
    'n_iii_br': begin
-        ftab_ext,Atom_RC_file,[1,2,3,4,5,6,7],Wavelength,br,g1,g2,Mult1,LowerTerm,UpperTerm,EXTEN_NO =Extention
+        ftab_ext,Atom_RC_file,[1,2,3,4,5,6,7],Wavelength,br,g1,g2,Mult1,LowerTerm,UpperTerm,EXTEN_NO =Extension
         rc_template={Wavelength:double(0.0), BR:double(0.0), $
               g1:long(0), g2:long(0), $ ;INTEGER
               Mult1:'', LowerTerm:'', UpperTerm:'' $ ;CHARACTER*9
@@ -187,7 +187,7 @@ case atom_ion_name of
         rc_data[*].UpperTerm=UpperTerm[*]
       end
    'o_iii_aeff': begin
-        ftab_ext,Atom_RC_file,[1,2,3,4,5,6,7,8,9],Term,Case1,a2,a4,a5,a6,b,c,d,EXTEN_NO =Extention
+        ftab_ext,Atom_RC_file,[1,2,3,4,5,6,7,8,9],Term,Case1,a2,a4,a5,a6,b,c,d,EXTEN_NO =Extension
         rc_template={Term:'', Case1: '', a2:double(0.0), a4:double(0.0), a5:double(0.0), a6:double(0.0), b:double(0.0), c:double(0.0), d:double(0.0)}  
         
         temp=size(a2,/DIMENSIONS)
@@ -206,7 +206,7 @@ case atom_ion_name of
         rc_data[*].d=d[*]
       end
    'o_iii_br': begin
-        ftab_ext,Atom_RC_file,[1,2,3,4,5,6,7,8,9], Wavelength,Br_A,Br_B,Br_C,g1,g2,Mult1,LowerTerm,UpperTerm,EXTEN_NO =Extention
+        ftab_ext,Atom_RC_file,[1,2,3,4,5,6,7,8,9], Wavelength,Br_A,Br_B,Br_C,g1,g2,Mult1,LowerTerm,UpperTerm,EXTEN_NO =Extension
         rc_template={Wavelength:double(0.0), Br_A:double(0.0), Br_B:double(0.0), Br_C:double(0.0), $
               g1:long(0), g2:long(0), Mult1:'', LowerTerm:'', UpperTerm:'' } 
           
@@ -227,7 +227,7 @@ case atom_ion_name of
         
       end
    'ne_iii_aeff': begin
-        ftab_ext,Atom_RC_file,[1,2,3,4,5,6,7],Wavelength,a,b,c,d,f,br,EXTEN_NO =Extention
+        ftab_ext,Atom_RC_file,[1,2,3,4,5,6,7],Wavelength,a,b,c,d,f,br,EXTEN_NO =Extension
         rc_template={Wavelength: double(0.0), a: double(0.0), b:double(0.0), c: double(0.0), d:double(0.0), f:double(0.0), br:double(0.0)}
         
         temp=size(Wavelength,/DIMENSIONS)

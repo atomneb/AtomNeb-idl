@@ -66,11 +66,11 @@ function atomneb_read_elj, Atom_Elj_file, atom, ion, level_num=level_num
     print, 'could not find the given element or ion'
     exit
   endif
-  Extention=element_data_list[ii].Extention
+  Extension=element_data_list[ii].Extension
 
   level_template={Configuration:'', Term:'', J:'', J_v: float(0.0), Ej:double(0.0), Reference:''}
   
-  ftab_ext,Atom_Elj_file,[1,2,3,4,5,6],Configuration,Term,J_s,J_v,Ej,Reference,EXTEN_NO =Extention
+  ftab_ext,Atom_Elj_file,[1,2,3,4,5,6],Configuration,Term,J_s,J_v,Ej,Reference,EXTEN_NO =Extension
   temp=size(Reference,/DIMENSIONS)
   level_length=temp[0]
   if keyword_set(level_num) eq 1 then begin

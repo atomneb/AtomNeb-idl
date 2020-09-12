@@ -73,13 +73,13 @@ function atomneb_search_aeff_n_ii_fsl13, Atom_RC_file, atom, ion, wavelength
     ii=where(abs(element_data_list.wavelength-wavelength) eq value_min)
     ii_length=1
   endif
-  Extention1=element_data_list[ii].Extention
+  Extension1=element_data_list[ii].Extension
   Wavelength1=element_data_list[ii].wavelength
   
   rc_element_template={Wavelength: float(0.0), Aeff:fltarr(7,4)}
   Select_Aeff_Data=replicate(rc_element_template, ii_length)
   for i=0, ii_length-1 do begin 
-    fits_read,Atom_RC_file,rc_aeff,header1,EXTEN_NO =Extention1[i]
+    fits_read,Atom_RC_file,rc_aeff,header1,EXTEN_NO =Extension1[i]
     Select_Aeff_Data[i].Wavelength=Wavelength1[i]
     Select_Aeff_Data[i].Aeff[*,*]=rc_aeff[*,*]
   endfor

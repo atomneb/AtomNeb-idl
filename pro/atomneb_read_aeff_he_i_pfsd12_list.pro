@@ -10,7 +10,7 @@ function atomneb_read_aeff_he_i_pfsd12_list, Atom_RC_file
 ; :Returns:
 ;    type=an array of data. This function returns the aeff_data_list: 
 ;           { Aeff_Data:'',
-;             Extention:0.0}
+;             Extension:0.0}
 ;
 ; :Params:
 ;     Atom_RC_file  : in, required, type=string
@@ -35,16 +35,16 @@ function atomneb_read_aeff_he_i_pfsd12_list, Atom_RC_file
 ; :History:
 ;     15/01/2017, IDL code by A. Danehkar
 ;-
-  element_template={Aeff_Data:'', Extention:0}
+  element_template={Aeff_Data:'', Extension:0}
   
-  ftab_ext,Atom_RC_file,[1,2],Aeff_Data,Extention,EXTEN_NO =1
+  ftab_ext,Atom_RC_file,[1,2],Aeff_Data,Extension,EXTEN_NO =1
   temp=size(Aeff_Data,/DIMENSIONS)
   element_length=temp[0]
   
   element_data=replicate(element_template, element_length)
   for i=0, element_length-1 do begin 
      element_data[i].Aeff_Data=strtrim(Aeff_Data[i])
-     element_data[i].Extention=Extention[i]
+     element_data[i].Extension=Extension[i]
   endfor
   return, element_data
 end

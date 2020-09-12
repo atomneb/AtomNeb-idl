@@ -79,9 +79,9 @@ function atomneb_read_omij, Atom_Omij_file, atom, ion, reference=reference, leve
     ii=min(iii)
   endelse
 
-  Extention=element_data_list[ii].Extention
+  Extension=element_data_list[ii].Extension
  
-  ftab_ext,Atom_Omij_file,[1,2,3],level1,level2,strength,EXTEN_NO =Extention
+  ftab_ext,Atom_Omij_file,[1,2,3],level1,level2,strength,EXTEN_NO =Extension
   temp=size(level1,/DIMENSIONS)
   n_line=temp[0]
   temp=size(strength,/DIMENSIONS)

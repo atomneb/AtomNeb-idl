@@ -85,12 +85,12 @@ function atomneb_read_aeff_he_i_pfsd12, Atom_RC_file, atom, ion, wavelength=wave
     ii=min(iii)
   endelse
 
-  Extention=element_data_list[ii].Extention
+  Extension=element_data_list[ii].Extension
  
   atom_ion_name=strlowcase(atom)+'_'+strlowcase(ion)+prefix
   case atom_ion_name of
      'he_ii_aeff': begin
-        fits_read,Atom_RC_file,rc_aeff,header1,EXTEN_NO =Extention 
+        fits_read,Atom_RC_file,rc_aeff,header1,EXTEN_NO =Extension 
         temp=size(rc_aeff,/DIMENSIONS)
         col1=temp[0]
         row1=temp[1]
@@ -99,7 +99,7 @@ function atomneb_read_aeff_he_i_pfsd12, Atom_RC_file, atom, ion, wavelength=wave
         rc_data.Aeff[*,*]=rc_aeff[*,*]
       end
     'he_ii_wavelength': begin
-        ftab_ext,Atom_RC_file,[1,2,3],Wavelength,LowerTerm,UpperTerm,EXTEN_NO =Extention
+        ftab_ext,Atom_RC_file,[1,2,3],Wavelength,LowerTerm,UpperTerm,EXTEN_NO =Extension
         rc_template={Wavelength: double(0.0), LowerTerm:'', UpperTerm:''}
         
         temp=size(Wavelength,/DIMENSIONS)

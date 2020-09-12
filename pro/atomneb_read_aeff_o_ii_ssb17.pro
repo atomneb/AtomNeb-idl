@@ -77,7 +77,7 @@ function atomneb_read_aeff_o_ii_ssb17, Atom_RC_file, atom, ion, case1, wavelengt
   rc_element_template={Wavelength: float(0.0), Aeff:fltarr(16,25)}
   rc_data=replicate(rc_element_template, wave_size)
    
-  Extention1=element_data_list[wave_loc1].Extention
+  Extension1=element_data_list[wave_loc1].Extension
   Wavelength1=element_data_list[wave_loc1].wavelength
   
   if keyword_set(wavelength) eq 1 then begin
@@ -89,7 +89,7 @@ function atomneb_read_aeff_o_ii_ssb17, Atom_RC_file, atom, ion, case1, wavelengt
        return, rc_wave
   endif
   for i=0, wave_size-1 do begin 
-    fits_read,Atom_RC_file,rc_aeff,header1,EXTEN_NO =Extention1[i]
+    fits_read,Atom_RC_file,rc_aeff,header1,EXTEN_NO =Extension1[i]
     rc_data[i].Wavelength=Wavelength1[i]
     rc_data[i].Aeff[*,*]=rc_aeff[*,*]
   endfor
