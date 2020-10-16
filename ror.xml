@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:ror="http://rorweb.com/0.1/" >
+<channel>
+  <title>ROR Sitemap for https://atomneb.github.io/AtomNeb-idl/</title>
+  <link>https://atomneb.github.io/AtomNeb-idl/</link>
+
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/</link>
+     <title>AtomNeb- IDL/GDL Library for Atomic Data for Ionized Nebulae</title>
+     <description>AtomNeb - A collection of Interactive Data Language (IDL)/GNU Data Language (GDL) programs developed to provide atomic data for ionized nebulae - maintained by Ashkbiz Danehkar</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>0</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/</link>
+     <title>API Documentation for AtomNeb-idl</title>
+     <description>API Documentation for AtomNeb-idl</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/overview.html</link>
+     <title>API Documentation for AtomNeb-idl</title>
+     <description>API Documentation for AtomNeb-idl</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/all-files.html</link>
+     <title>All files (API Documentation for AtomNeb-idl)</title>
+     <description>All files (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/categories.html</link>
+     <title>Categories (API Documentation for AtomNeb-idl)</title>
+     <description>Categories (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/search.html</link>
+     <title>Search (API Documentation for AtomNeb-idl)</title>
+     <description>Search (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/idldoc-index.html</link>
+     <title>Index (API Documentation for AtomNeb-idl)</title>
+     <description>Index (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/idldoc-warnings.html</link>
+     <title>Warnings (API Documentation for AtomNeb-idl)</title>
+     <description>Warnings (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/idldoc-help.html</link>
+     <title>Help (API Documentation for AtomNeb-idl)</title>
+     <description>Help (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/index.html</link>
+     <title>API Documentation for AtomNeb-idl</title>
+     <description>API Documentation for AtomNeb-idl</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/atomneb__define.html</link>
+     <title>atomneb__define.pro (API Documentation for AtomNeb-idl)</title>
+     <description>atomneb__define.pro (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/atomneb_get_aeff_collection_reference_citation.html</link>
+     <title>atomneb_get_aeff_collection_reference_citation.pro (API Documentation for AtomNeb-idl)</title>
+     <description>atomneb_get_aeff_collection_reference_citation.pro (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/atomneb_get_aeff_he_i_pfsd12_reference_citation.html</link>
+     <title>atomneb_get_aeff_he_i_pfsd12_reference_citation.pro (API Documentation for AtomNeb-idl)</title>
+     <description>atomneb_get_aeff_he_i_pfsd12_reference_citation.pro (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/atomneb_get_aeff_n_ii_fsl13_reference_citation.html</link>
+     <title>atomneb_get_aeff_n_ii_fsl13_reference_citation.pro (API Documentation for AtomNeb-idl)</title>
+     <description>atomneb_get_aeff_n_ii_fsl13_reference_citation.pro (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/atomneb_get_aeff_o_ii_ssb17_reference_citation.html</link>
+     <title>atomneb_get_aeff_o_ii_ssb17_reference_citation.pro (API Documentation for AtomNeb-idl)</title>
+     <description>atomneb_get_aeff_o_ii_ssb17_reference_citation.pro (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/atomneb_get_aeff_ppb91_reference_citation.html</link>
+     <title>atomneb_get_aeff_ppb91_reference_citation.pro (API Documentation for AtomNeb-idl)</title>
+     <description>atomneb_get_aeff_ppb91_reference_citation.pro (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/atomneb_get_aeff_sh95_reference_citation.html</link>
+     <title>atomneb_get_aeff_sh95_reference_citation.pro (API Documentation for AtomNeb-idl)</title>
+     <description>atomneb_get_aeff_sh95_reference_citation.pro (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/atomneb_get_aij_reference_citation.html</link>
+     <title>atomneb_get_aij_reference_citation.pro (API Documentation for AtomNeb-idl)</title>
+     <description>atomneb_get_aij_reference_citation.pro (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/atomneb_get_elj_reference_citation.html</link>
+     <title>atomneb_get_elj_reference_citation.pro (API Documentation for AtomNeb-idl)</title>
+     <description>atomneb_get_elj_reference_citation.pro (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/atomneb_get_omij_reference_citation.html</link>
+     <title>atomneb_get_omij_reference_citation.pro (API Documentation for AtomNeb-idl)</title>
+     <description>atomneb_get_omij_reference_citation.pro (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/atomneb_list_aeff_collection_references.html</link>
+     <title>atomneb_list_aeff_collection_references.pro (API Documentation for AtomNeb-idl)</title>
+     <description>atomneb_list_aeff_collection_references.pro (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/atomneb_list_aeff_he_i_pfsd12_references.html</link>
+     <title>atomneb_list_aeff_he_i_pfsd12_references.pro (API Documentation for AtomNeb-idl)</title>
+     <description>atomneb_list_aeff_he_i_pfsd12_references.pro (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/atomneb_list_aeff_n_ii_fsl13_references.html</link>
+     <title>atomneb_list_aeff_n_ii_fsl13_references.pro (API Documentation for AtomNeb-idl)</title>
+     <description>atomneb_list_aeff_n_ii_fsl13_references.pro (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/atomneb_list_aeff_o_ii_ssb17_references.html</link>
+     <title>atomneb_list_aeff_o_ii_ssb17_references.pro (API Documentation for AtomNeb-idl)</title>
+     <description>atomneb_list_aeff_o_ii_ssb17_references.pro (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/atomneb_list_aeff_ppb91_references.html</link>
+     <title>atomneb_list_aeff_ppb91_references.pro (API Documentation for AtomNeb-idl)</title>
+     <description>atomneb_list_aeff_ppb91_references.pro (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/atomneb_list_aeff_sh95_references.html</link>
+     <title>atomneb_list_aeff_sh95_references.pro (API Documentation for AtomNeb-idl)</title>
+     <description>atomneb_list_aeff_sh95_references.pro (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/atomneb_list_aij_references.html</link>
+     <title>atomneb_list_aij_references.pro (API Documentation for AtomNeb-idl)</title>
+     <description>atomneb_list_aij_references.pro (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/atomneb_list_omij_references.html</link>
+     <title>atomneb_list_omij_references.pro (API Documentation for AtomNeb-idl)</title>
+     <description>atomneb_list_omij_references.pro (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/atomneb_read_aeff_collection.html</link>
+     <title>atomneb_read_aeff_collection.pro (API Documentation for AtomNeb-idl)</title>
+     <description>atomneb_read_aeff_collection.pro (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/atomneb_read_aeff_collection_list.html</link>
+     <title>atomneb_read_aeff_collection_list.pro (API Documentation for AtomNeb-idl)</title>
+     <description>atomneb_read_aeff_collection_list.pro (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/atomneb_read_aeff_collection_references.html</link>
+     <title>atomneb_read_aeff_collection_references.pro (API Documentation for AtomNeb-idl)</title>
+     <description>atomneb_read_aeff_collection_references.pro (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/atomneb_read_aeff_he_i_pfsd12.html</link>
+     <title>atomneb_read_aeff_he_i_pfsd12.pro (API Documentation for AtomNeb-idl)</title>
+     <description>atomneb_read_aeff_he_i_pfsd12.pro (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/atomneb_read_aeff_he_i_pfsd12_list.html</link>
+     <title>atomneb_read_aeff_he_i_pfsd12_list.pro (API Documentation for AtomNeb-idl)</title>
+     <description>atomneb_read_aeff_he_i_pfsd12_list.pro (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/atomneb_read_aeff_he_i_pfsd12_references.html</link>
+     <title>atomneb_read_aeff_he_i_pfsd12_references.pro (API Documentation for AtomNeb-idl)</title>
+     <description>atomneb_read_aeff_he_i_pfsd12_references.pro (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/atomneb_read_aeff_n_ii_fsl13.html</link>
+     <title>atomneb_read_aeff_n_ii_fsl13.pro (API Documentation for AtomNeb-idl)</title>
+     <description>atomneb_read_aeff_n_ii_fsl13.pro (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/atomneb_read_aeff_n_ii_fsl13_list.html</link>
+     <title>atomneb_read_aeff_n_ii_fsl13_list.pro (API Documentation for AtomNeb-idl)</title>
+     <description>atomneb_read_aeff_n_ii_fsl13_list.pro (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/atomneb_read_aeff_n_ii_fsl13_references.html</link>
+     <title>atomneb_read_aeff_n_ii_fsl13_references.pro (API Documentation for AtomNeb-idl)</title>
+     <description>atomneb_read_aeff_n_ii_fsl13_references.pro (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/atomneb_read_aeff_o_ii_ssb17.html</link>
+     <title>atomneb_read_aeff_o_ii_ssb17.pro (API Documentation for AtomNeb-idl)</title>
+     <description>atomneb_read_aeff_o_ii_ssb17.pro (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/atomneb_read_aeff_o_ii_ssb17_list.html</link>
+     <title>atomneb_read_aeff_o_ii_ssb17_list.pro (API Documentation for AtomNeb-idl)</title>
+     <description>atomneb_read_aeff_o_ii_ssb17_list.pro (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/atomneb_read_aeff_o_ii_ssb17_references.html</link>
+     <title>atomneb_read_aeff_o_ii_ssb17_references.pro (API Documentation for AtomNeb-idl)</title>
+     <description>atomneb_read_aeff_o_ii_ssb17_references.pro (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/atomneb_read_aeff_ppb91.html</link>
+     <title>atomneb_read_aeff_ppb91.pro (API Documentation for AtomNeb-idl)</title>
+     <description>atomneb_read_aeff_ppb91.pro (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/atomneb_read_aeff_ppb91_list.html</link>
+     <title>atomneb_read_aeff_ppb91_list.pro (API Documentation for AtomNeb-idl)</title>
+     <description>atomneb_read_aeff_ppb91_list.pro (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/atomneb_read_aeff_ppb91_references.html</link>
+     <title>atomneb_read_aeff_ppb91_references.pro (API Documentation for AtomNeb-idl)</title>
+     <description>atomneb_read_aeff_ppb91_references.pro (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/atomneb_read_aeff_sh95.html</link>
+     <title>atomneb_read_aeff_sh95.pro (API Documentation for AtomNeb-idl)</title>
+     <description>atomneb_read_aeff_sh95.pro (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/atomneb_read_aeff_sh95_list.html</link>
+     <title>atomneb_read_aeff_sh95_list.pro (API Documentation for AtomNeb-idl)</title>
+     <description>atomneb_read_aeff_sh95_list.pro (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/atomneb_read_aeff_sh95_references.html</link>
+     <title>atomneb_read_aeff_sh95_references.pro (API Documentation for AtomNeb-idl)</title>
+     <description>atomneb_read_aeff_sh95_references.pro (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/atomneb_read_aij.html</link>
+     <title>atomneb_read_aij.pro (API Documentation for AtomNeb-idl)</title>
+     <description>atomneb_read_aij.pro (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/atomneb_read_aij_list.html</link>
+     <title>atomneb_read_aij_list.pro (API Documentation for AtomNeb-idl)</title>
+     <description>atomneb_read_aij_list.pro (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/atomneb_read_aij_references.html</link>
+     <title>atomneb_read_aij_references.pro (API Documentation for AtomNeb-idl)</title>
+     <description>atomneb_read_aij_references.pro (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/atomneb_read_elj.html</link>
+     <title>atomneb_read_elj.pro (API Documentation for AtomNeb-idl)</title>
+     <description>atomneb_read_elj.pro (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/atomneb_read_elj_list.html</link>
+     <title>atomneb_read_elj_list.pro (API Documentation for AtomNeb-idl)</title>
+     <description>atomneb_read_elj_list.pro (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/atomneb_read_elj_references.html</link>
+     <title>atomneb_read_elj_references.pro (API Documentation for AtomNeb-idl)</title>
+     <description>atomneb_read_elj_references.pro (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/atomneb_read_omij.html</link>
+     <title>atomneb_read_omij.pro (API Documentation for AtomNeb-idl)</title>
+     <description>atomneb_read_omij.pro (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/atomneb_read_omij_list.html</link>
+     <title>atomneb_read_omij_list.pro (API Documentation for AtomNeb-idl)</title>
+     <description>atomneb_read_omij_list.pro (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/atomneb_read_omij_references.html</link>
+     <title>atomneb_read_omij_references.pro (API Documentation for AtomNeb-idl)</title>
+     <description>atomneb_read_omij_references.pro (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/atomneb_search_aeff_collection.html</link>
+     <title>atomneb_search_aeff_collection.pro (API Documentation for AtomNeb-idl)</title>
+     <description>atomneb_search_aeff_collection.pro (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/atomneb_search_aeff_he_i_pfsd12.html</link>
+     <title>atomneb_search_aeff_he_i_pfsd12.pro (API Documentation for AtomNeb-idl)</title>
+     <description>atomneb_search_aeff_he_i_pfsd12.pro (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/atomneb_search_aeff_n_ii_fsl13.html</link>
+     <title>atomneb_search_aeff_n_ii_fsl13.pro (API Documentation for AtomNeb-idl)</title>
+     <description>atomneb_search_aeff_n_ii_fsl13.pro (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/atomneb_search_aeff_o_ii_ssb17.html</link>
+     <title>atomneb_search_aeff_o_ii_ssb17.pro (API Documentation for AtomNeb-idl)</title>
+     <description>atomneb_search_aeff_o_ii_ssb17.pro (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/atomneb_search_aeff_ppb91.html</link>
+     <title>atomneb_search_aeff_ppb91.pro (API Documentation for AtomNeb-idl)</title>
+     <description>atomneb_search_aeff_ppb91.pro (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/atomneb_search_aeff_sh95.html</link>
+     <title>atomneb_search_aeff_sh95.pro (API Documentation for AtomNeb-idl)</title>
+     <description>atomneb_search_aeff_sh95.pro (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/atomneb_search_aij.html</link>
+     <title>atomneb_search_aij.pro (API Documentation for AtomNeb-idl)</title>
+     <description>atomneb_search_aij.pro (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/atomneb_search_omij.html</link>
+     <title>atomneb_search_omij.pro (API Documentation for AtomNeb-idl)</title>
+     <description>atomneb_search_omij.pro (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://atomneb.github.io/AtomNeb-idl/doc/dir-overview.html</link>
+     <title>Directory: ./ (API Documentation for AtomNeb-idl)</title>
+     <description>Directory: ./ (API Documentation for AtomNeb-idl)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>4</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+</channel>
+</rss>
+  
