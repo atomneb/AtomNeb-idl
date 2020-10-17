@@ -332,5 +332,34 @@ For more information on how to use the API functions from the AtomNeb IDL libray
 References
 ==========
 
-* Danehkar, A. (2019). AtomNeb: IDL Library for Atomic Data of Ionized Nebulae. *J. Open Source Softw.*, **4**, 898. doi:`10.21105/joss.00898 <https://doi.org/10.21105/joss.00898>`_
+* Danehkar, A. (2019). AtomNeb: IDL Library for Atomic Data of Ionized Nebulae. *J. Open Source Softw.*, **4**, 898. doi:`10.21105/joss.00898 <https://doi.org/10.21105/joss.00898>`_  ads:`2019JOSS....4..898D <https://ui.adsabs.harvard.edu/abs/2019JOSS....4..898D>`_.
 
+
+Citation
+========
+
+Using **AtomNeb** in a scholarly publication? Please cite this paper:
+
+.. code-block:: bibtex
+
+   @article{Danehkar2019,
+     author = {{Danehkar}, Ashkbiz},
+     title = {AtomNeb: IDL Library for Atomic Data of Ionized Nebulae},
+     journal = {Journal of Open Source Software},
+     volume = {4},
+     number = {35},
+     pages = {898},
+     year = {2019},
+     doi = {10.21105/joss.00898}
+   }
+
+Learn More
+==========
+
+==================  =============================================
+**Documentation**   https://atomneb.github.io/AtomNeb-idl/doc/
+**Repository**      https://github.com/atomneb/AtomNeb-idl
+**Issues & Ideas**  https://github.com/atomneb/AtomNeb-idl/issues
+**DOI**             `10.21105/joss.00898 <https://doi.org/10.21105/joss.00898>`_
+**Archive**         `10.5281/zenodo.2584420 <https://doi.org/10.5281/zenodo.2584420>`_
+==================  =============================================
