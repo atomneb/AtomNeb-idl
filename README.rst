@@ -340,7 +340,7 @@ References
 Citation
 ========
 
-Using **AtomNeb** in a scholarly publication? Please cite this paper:
+Using **AtomNeb** in a scholarly publication? Please cite these papers:
 
 .. code-block:: bibtex
 
