@@ -10,7 +10,7 @@ function atomneb_read_omij_list, Atom_Omij_file
 ; :Returns:
 ;    type=an array of data. This function returns the omij_data_list: 
 ;          { Omij_Data:'', 
-;            Extension:0.0}
+;            Extension:0}
 ;
 ; :Params:
 ;     Atom_Omij_file  : in, required, type=string

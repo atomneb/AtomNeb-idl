@@ -10,7 +10,7 @@ function atomneb_read_aij_list, Atom_Aij_file
 ; :Returns:
 ;    type=an array of data. This function returns the aij_data_list: 
 ;          { Aij_Data:'', 
-;            Extension:0.0}
+;            Extension:0}
 ;
 ; :Params:
 ;     Atom_Aij_file  : in, required, type=string

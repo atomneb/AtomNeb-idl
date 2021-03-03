@@ -104,6 +104,7 @@ function atomneb_read_aeff_ppb91, Atom_RC_file, atom, ion, reference=reference
   rc_data[*].c=c[*]
   rc_data[*].d=d[*]
   rc_data[*].br=br[*]
+  rc_data[*].q=Q[*]
   rc_data[*].y=y[*]
   ;endfor
   return, rc_data

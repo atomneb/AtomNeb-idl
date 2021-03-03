@@ -10,7 +10,7 @@ function atomneb_read_aeff_ppb91_list, Atom_RC_file
 ; :Returns:
 ;    type=an array of data. This function returns the aeff_data_list: 
 ;          { Aeff_Data:'', 
-;            Extension:0.0}
+;            Extension:0}
 ;
 ; :Params:
 ;     Atom_RC_file  : in, required, type=string

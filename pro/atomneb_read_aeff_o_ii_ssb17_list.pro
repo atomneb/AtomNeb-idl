@@ -10,7 +10,7 @@ function atomneb_read_aeff_o_ii_ssb17_list, Atom_RC_file
 ; :Returns:
 ;    type=an array of data. This function returns the aeff_data_list: 
 ;          {Aeff_Data:'',  Extension:0, $
-;           IND:long(0), Wavelength: float(0.0), $
+;           IND:long(0), Wavelength: double(0.0), $
 ;           Case1:'',  lower_term: '', upper_term: ''}
 ;
 ; :Params:
@@ -37,7 +37,7 @@ function atomneb_read_aeff_o_ii_ssb17_list, Atom_RC_file
 ;     03/07/2017, IDL code by A. Danehkar
 ;-
   element_template={Aeff_Data:'',  Extension:0, $
-              IND:long(0), Wavelength: float(0.0), Case1: '', lower_term:'', upper_term:''}
+              IND:long(0), Wavelength: double(0.0), Case1: '', lower_term:'', upper_term:''}
                                   
   ftab_ext,Atom_RC_file,[1,2,3,4,5,6,7],Aeff_Data,Extension,IND,Wavelength,Case1,lower_term,upper_term,EXTEN_NO =1
   temp=size(Aeff_Data,/DIMENSIONS)

@@ -68,7 +68,7 @@ function atomneb_read_elj, Atom_Elj_file, atom, ion, level_num=level_num
   endif
   Extension=element_data_list[ii].Extension
 
-  level_template={Configuration:'', Term:'', J:'', J_v: float(0.0), Ej:double(0.0), Reference:''}
+  level_template={Configuration:'', Term:'', J:'', J_v: double(0.0), Ej:double(0.0), Reference:''}
   
   ftab_ext,Atom_Elj_file,[1,2,3,4,5,6],Configuration,Term,J_s,J_v,Ej,Reference,EXTEN_NO =Extension
   temp=size(Reference,/DIMENSIONS)

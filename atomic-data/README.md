@@ -11,3 +11,6 @@ The collisionally excitation atomic data were generated for use in [proEQUIB](ht
 * **Chianti60** from the [CHIANTI atomic database](http://www.chiantidatabase.org/) version 6.0.
 
 * **Chianti70** from the [CHIANTI atomic database](http://www.chiantidatabase.org/) version 7.0.
+
+* **Chianti90** from the [CHIANTI atomic database](http://www.chiantidatabase.org/) version 9.0.
+

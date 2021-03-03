@@ -71,7 +71,7 @@ function atomneb::read_elj_list
 ; :Returns:
 ;    type=an array of data. This function returns the elj_data_list:
 ;          { Elj_Data:'',
-;            Extension:0.0}
+;            Extension:0}
 ;
 ; :Params:
 ;     Atom_Elj_file  : in, required, type=string
@@ -112,7 +112,7 @@ function atomneb::read_omij_list
 ; :Returns:
 ;    type=an array of data. This function returns the omij_data_list:
 ;          { Omij_Data:'',
-;            Extension:0.0}
+;            Extension:0}
 ;
 ; :Params:
 ;     Atom_Omij_file  : in, required, type=string
@@ -153,7 +153,7 @@ function atomneb::read_aij_list
 ; :Returns:
 ;    type=an array of data. This function returns the aij_data_list:
 ;          { Aij_Data:'',
-;            Extension:0.0}
+;            Extension:0}
 ;
 ; :Params:
 ;     Atom_Aij_file  : in, required, type=string

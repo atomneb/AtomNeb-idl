@@ -74,14 +74,14 @@ function atomneb_read_aeff_o_ii_ssb17, Atom_RC_file, atom, ion, case1, wavelengt
   temp=size(wave_loc1,/DIMENSIONS) 
   if temp[0] lt 0 then return, 0
   wave_size=temp[0]
-  rc_element_template={Wavelength: float(0.0), Aeff:fltarr(16,25)}
+  rc_element_template={Wavelength: double(0.0), Aeff:dblarr(16,25)}
   rc_data=replicate(rc_element_template, wave_size)
    
   Extension1=element_data_list[wave_loc1].Extension
   Wavelength1=element_data_list[wave_loc1].wavelength
   
   if keyword_set(wavelength) eq 1 then begin
-       rc_wave_template={Wavelength: float(0.0), lower_term:'',  upper_term: ''}
+       rc_wave_template={Wavelength: double(0.0), lower_term:'',  upper_term: ''}
        rc_wave=replicate(rc_wave_template, wave_size)
        rc_wave.Wavelength=element_data_list[wave_loc1].wavelength
        rc_wave.lower_term=element_data_list[wave_loc1].lower_term
