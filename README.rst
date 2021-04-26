@@ -18,7 +18,7 @@ AtomNeb IDL Library
     :target: https://github.com/atomneb/AtomNeb-idl/blob/master/LICENSE
     :alt: GitHub license
 
-.. image:: https://zenodo.org/badge/DOI/10.5281/zenodo.2584420.svg
+.. image:: https://img.shields.io/badge/DOI-10.5281/zenodo.2584420-blue.svg
     :target: https://doi.org/10.5281/zenodo.2584420
     :alt: Zenodo
 
