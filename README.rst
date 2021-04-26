@@ -2,8 +2,8 @@
 AtomNeb IDL Library
 ===================
     
-.. image:: https://travis-ci.org/atomneb/AtomNeb-idl.svg?branch=master
-    :target: https://travis-ci.org/atomneb/AtomNeb-idl
+.. image:: https://travis-ci.com/atomneb/AtomNeb-idl.svg?branch=master
+    :target: https://travis-ci.com/atomneb/AtomNeb-idl
     :alt: Build Status
 
 .. image:: https://ci.appveyor.com/api/projects/status/gi4ok3wy7jjn1ekb?svg=true
