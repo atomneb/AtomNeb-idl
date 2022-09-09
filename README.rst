@@ -18,8 +18,8 @@ AtomNeb IDL Library
     :target: https://github.com/atomneb/AtomNeb-idl/blob/master/LICENSE
     :alt: GitHub license
 
-.. image:: https://img.shields.io/badge/DOI-10.5281/zenodo.2584420-blue.svg
-    :target: https://doi.org/10.5281/zenodo.2584420
+.. image:: https://img.shields.io/badge/DOI-10.5281/zenodo.2584419-blue.svg
+    :target: https://doi.org/10.5281/zenodo.2584419
     :alt: Zenodo
 
 .. image:: http://joss.theoj.org/papers/10.21105/joss.00898/status.svg
@@ -375,5 +375,5 @@ Learn More
 **Repository**      https://github.com/atomneb/AtomNeb-idl
 **Issues & Ideas**  https://github.com/atomneb/AtomNeb-idl/issues
 **DOI**             `10.21105/joss.00898 <https://doi.org/10.21105/joss.00898>`_
-**Archive**         `10.5281/zenodo.2584420 <https://doi.org/10.5281/zenodo.2584420>`_
+**Archive**         `10.5281/zenodo.2584419 <https://doi.org/10.5281/zenodo.2584419>`_
 ==================  =============================================
