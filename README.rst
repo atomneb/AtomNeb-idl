@@ -25,12 +25,14 @@ AtomNeb IDL Library
 .. image:: http://joss.theoj.org/papers/10.21105/joss.00898/status.svg
     :target: https://doi.org/10.21105/joss.00898
     :alt: JOSS
+    
+.. image:: https://mybinder.org/badge_logo.svg
+ :target: https://mybinder.org/v2/gh/atomneb/AtomNeb-idl/HEAD?labpath=Notebooks.ipynb
 
 Description
 ============
 
 **AtomNeb-idl** is a library written in `Interactive Data Language <http://www.harrisgeospatial.com/ProductsandSolutions/GeospatialProducts/IDL.aspx>`_ (IDL)/`GNU Data Language <http://gnudatalanguage.sourceforge.net/>`_ (GDL) for reading atomic data from **AtomNeb**, which is a database containing atomic data stored in the Flexible Image Transport System (FITS) file format for *collisionally excited lines* and *recombination lines* typically observed in spectra of ionized gaseous nebulae. The AtomNeb database were generated for use in `proEQUIB <https://github.com/equib/proEQUIB>`_, `pyEQUIB <https://github.com/equib/pyEQUIB>`_, and other nebular spectral analysis tools. 
-
 
 
 Collisionally Excited Lines
@@ -146,6 +148,13 @@ How to Use
 ==========
 
 The Documentation of the IDL functions provides in detail in the *API Documentation* (`atomneb.github.io/AtomNeb-idl/doc <https://atomneb.github.io/AtomNeb-idl/doc>`_). There are two main categories: *collisionally excited lines (CEL)* and *recombination lines (RC)*.
+
+See *Jupyter Notebooks*: `Notebooks.ipynb <https://github.com/atomneb/AtomNeb-idl/blob/master/Notebooks.ipynb>`_
+
+Run *Jupyter Notebooks* on `Binder <https://mybinder.org/v2/gh/atomneb/AtomNeb-idl/HEAD?labpath=Notebooks.ipynb>`_:
+
+.. image:: https://mybinder.org/badge_logo.svg
+ :target: https://mybinder.org/v2/gh/atomneb/AtomNeb-idl/HEAD?labpath=Notebooks.ipynb
 
 * The atomic data for **collisionally excited lines (CEL)** contain Energy Levels (Ej), Collision Strengths (Ωij), and Transition Probabilities (Aij). We have four atomic datasets for them: `collection <https://github.com/atomneb/AtomNeb-idl/tree/master/atomic-data/collection>`_, `chianti52 <https://github.com/atomneb/AtomNeb-idl/tree/master/atomic-data/chianti52>`_, `chianti60 <https://github.com/atomneb/AtomNeb-idl/tree/master/atomic-data/chianti60>`_, and `chianti70 <https://github.com/atomneb/AtomNeb-idl/tree/master/atomic-data/chianti70>`_. 
     
