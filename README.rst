@@ -86,11 +86,15 @@ Dependent IDL Packages
 
     - `The IDL Astronomy User's Library <https://idlastro.gsfc.nasa.gov/homepage.html>`_
     
-* To get this package with all the dependent packages, you can simply use ``git`` command as follows::
+* To get this package with all the dependent packages, you can simply use ``git`` command as follows:
+
+.. code-block::
 
         git clone --recursive https://github.com/atomneb/AtomNeb-idl
 
-* If you plan to use the recent O II recombination coefficients (`Storey, Sochi and Bastin 2017 <http://adsabs.harvard.edu/abs/2017MNRAS.470..379S>`_), you need to unpack them::
+* If you plan to use the recent O II recombination coefficients (`Storey, Sochi and Bastin 2017 <http://adsabs.harvard.edu/abs/2017MNRAS.470..379S>`_), you need to unpack them:
+
+.. code-block::
 
         cd AtomNeb-idl/atomic-data-rc/
         tar -xvf *.fits.tar.gz
@@ -108,20 +112,28 @@ Installation in GDL
 
 *  You can install the GNU Data Language (GDL) if you do not have it on your machine:
 
-    - Linux (Fedora)::
+    - Linux (Fedora):
+    
+    .. code-block::
 
         sudo dnf install gdl
     
-    - Linux (Ubuntu)::
+    - Linux (Ubuntu):
+    
+    .. code-block::
     
         sudo apt-get install gnudatalanguage
     
-    - OS X (`brew <https://brew.sh/>`_)::
+    - OS X (`brew <https://brew.sh/>`_):
+    
+    .. code-block::
 
         brew tap brewsci/science
         brew install gnudatalanguage
 
-    - OS X (`macports <https://www.macports.org/>`_)::
+    - OS X (`macports <https://www.macports.org/>`_):
+    
+    .. code-block::
 
         sudo port selfupdate
         sudo port upgrade libtool
@@ -129,16 +141,22 @@ Installation in GDL
     
     - Windows: You can use the `GNU Data Language for Win32 <https://sourceforge.net/projects/gnudatalanguage-win32/>`_ (Unofficial Version) or you can compile the `GitHub source <https://github.com/gnudatalanguage/gdl>`_ using Visual Studio 2015 as shown in `appveyor.yml <https://github.com/gnudatalanguage/gdl/blob/master/appveyor.yml>`_.
 
-* To install the **AtomNeb** database and its API library in GDL, you need to add the path of this package directory to your ``.gdl_startup`` file in your home directory::
+* To install the **AtomNeb** database and its API library in GDL, you need to add the path of this package directory to your ``.gdl_startup`` file in your home directory:
+
+  .. code-block::
 
     !PATH=!PATH + ':/home/AtomNeb-idl/pro/'
     !PATH=!PATH + ':/home/AtomNeb-idl/externals/astron/pro/'
 
-  You may also need to set ``GDL_STARTUP`` if you have not done in ``.bashrc`` (bash)::
+  You may also need to set ``GDL_STARTUP`` if you have not done in ``.bashrc`` (bash):
+  
+  .. code-block::
 
     export GDL_STARTUP=~/.gdl_startup
 
-  or in ``.tcshrc`` (cshrc)::
+  or in ``.tcshrc`` (cshrc):
+  
+  .. code-block::
 
     setenv GDL_STARTUP ~/.gdl_startup
 
@@ -158,15 +176,19 @@ Run *Jupyter Notebooks* on `Binder <https://mybinder.org/v2/gh/atomneb/AtomNeb-i
 
 * The atomic data for **collisionally excited lines (CEL)** contain Energy Levels (Ej), Collision Strengths (Ωij), and Transition Probabilities (Aij). We have four atomic datasets for them: `collection <https://github.com/atomneb/AtomNeb-idl/tree/master/atomic-data/collection>`_, `chianti52 <https://github.com/atomneb/AtomNeb-idl/tree/master/atomic-data/chianti52>`_, `chianti60 <https://github.com/atomneb/AtomNeb-idl/tree/master/atomic-data/chianti60>`_, and `chianti70 <https://github.com/atomneb/AtomNeb-idl/tree/master/atomic-data/chianti70>`_. 
     
-    You need to load the **atomneb** object class, and choose either *collection*, *chianti52*, *chianti60* or *chianti70* as follows::
+    You need to load the **atomneb** object class, and choose either *collection*, *chianti52*, *chianti60* or *chianti70* as follows:
+    
+    .. code-block:: idl
     
         atm=obj_new('atomneb')
         atm->set_data_cel,'chianti70'
     
     Now you have access to:
      
-    - *Energy Levels* (Ej)::
+    - *Energy Levels* (Ej):
     
+      .. code-block:: idl
+      
         atom='o'
         ion='iii'
         oiii_elj_data=atm->read_elj(atom, ion, level_num=6)
@@ -178,8 +200,10 @@ Run *Jupyter Notebooks* on `Binder <https://mybinder.org/v2/gh/atomneb/AtomNeb-i
         0.00000      1.00000      2.00000      2.00000      0.00000      2.00000
         0.00000      113.200      306.200      20273.30     43185.69     60324.80
     
-    - *Collision Strengths* (Ωij)::
+    - *Collision Strengths* (Ωij):
     
+      .. code-block:: idl
+      
         atom='o'
         ion='iii'
         oiii_omij_data=atm->read_omij(atom, ion)
@@ -193,7 +217,9 @@ Run *Jupyter Notebooks* on `Binder <https://mybinder.org/v2/gh/atomneb/AtomNeb-i
         0       2       3       4       5       ...
         100.0      158.50       251.20       398.10       631.0       ...
     
-    - *Transition Probabilities* (Aij)::
+    - *Transition Probabilities* (Aij):
+    
+      .. code-block:: idl
     
         atom='o'
         ion='iii'
@@ -206,13 +232,17 @@ Run *Jupyter Notebooks* on `Binder <https://mybinder.org/v2/gh/atomneb/AtomNeb-i
     
 * The atomic data for **recombination lines (RC)** contain effective recombination coefficients (αeff) of emission lines from different collections: `RC Collection <https://github.com/atomneb/AtomNeb-idl/tree/master/atomic-data-rc>`_, `SH95 Collection <https://github.com/atomneb/AtomNeb-idl/tree/master/atomic-data-rc>`_, `PPB91 Collection <https://github.com/atomneb/AtomNeb-idl/tree/master/atomic-data-rc>`_, `PFSD12 He I data <https://github.com/atomneb/AtomNeb-idl/tree/master/atomic-data-rc>`_, `FSL13 N II data <https://github.com/atomneb/AtomNeb-idl/tree/master/atomic-data-rc>`_, and `SSB17 O II data <https://github.com/atomneb/AtomNeb-idl/tree/master/atomic-data-rc>`_.
     
-    You need to load the **atomneb** object class::
+    You need to load the **atomneb** object class:
+    
+    .. code-block:: idl
     
         atm=obj_new('atomneb')
     
     Now you have access to effective recombination coefficients (αeff) of the following collections:
      
-    - *RC Collection*::
+    - *RC Collection*:
+    
+      .. code-block:: idl
     
         atom='c'
         ion='iii'
@@ -229,7 +259,9 @@ Run *Jupyter Notebooks* on `Binder <https://mybinder.org/v2/gh/atomneb/AtomNeb-i
         997.00000      0.78210000     -0.36840000   0.00030000000     -0.12170000     -0.78740000
         ...
         
-    - *SH95 Collection*::
+    - *SH95 Collection*:
+    
+      .. code-block:: idl
     
         atom='h'
         ion='ii'
@@ -241,7 +273,9 @@ Run *Jupyter Notebooks* on `Binder <https://mybinder.org/v2/gh/atomneb/AtomNeb-i
         100.00000       500.00000       0.0000000   4.2140000e-27   1.7560000e-27   1.0350000e-27
         ...
         
-    - *PPB91 Collection*::
+    - *PPB91 Collection*:
+    
+      .. code-block:: idl
     
         atom='c'
         ion='iii'
@@ -259,7 +293,9 @@ Run *Jupyter Notebooks* on `Binder <https://mybinder.org/v2/gh/atomneb/AtomNeb-i
         C2+A       4267.1500       1.0110000     -0.75400000       2.5870000      0.71900000      0.95000000       2.7950000
         ...
           
-    - *PFSD12 He I data*::
+    - *PFSD12 He I data*:
+    
+      .. code-block:: idl
     
         atom='he'
         ion='ii'
@@ -272,7 +308,9 @@ Run *Jupyter Notebooks* on `Binder <https://mybinder.org/v2/gh/atomneb/AtomNeb-i
         5000.0000       10.000000      -25.379540      -25.058970      -25.948440      -24.651820      -25.637660     
         ...
         
-    - *FSL13 N II data*::
+    - *FSL13 N II data*:
+    
+      .. code-block:: idl
     
         atom='n'
         ion='iii'
@@ -297,20 +335,28 @@ Run *Jupyter Notebooks* on `Binder <https://mybinder.org/v2/gh/atomneb/AtomNeb-i
         6445.34 6g - 4f2p6g F[7/2]o4 - 2p4f D[5/2]e3
         ...
         
-    - *SSB17 O II data*: You first need to unpack rc_o_iii_SSB17_orl_case_b.fits.tar.gz, e.g.:: 
+    - *SSB17 O II data*: You first need to unpack rc_o_iii_SSB17_orl_case_b.fits.tar.gz, e.g.:
 
+      .. code-block::
+      
         tar -xvf rc_o_iii_SSB17_orl_case_b.fits.tar.gz
 
-      If you need to have access to the full dataset (entire wavelengths, case A and B)::
+      If you need to have access to the full dataset (entire wavelengths, case A and B):
+      
+      .. code-block::
 
         tar -xvf rc_o_iii_SSB17.fits.tar.gz
 
-      To use the full dataset::
+      To use the full dataset:
+      
+      .. code-block:: idl
 
         atm->set_Atom_RC_O_III_SSB17, /full_data
 
-      Please note that using the entire atomic data will make your program very slow and you may need to have a higher memory on your system. Without the above comment, as default, the cose uses rc_o_iii_SSB17_orl_case_b.fits::
+      Please note that using the entire atomic data will make your program very slow and you may need to have a higher memory on your system. Without the above comment, as default, the cose uses rc_o_iii_SSB17_orl_case_b.fits:
 
+      .. code-block:: idl
+      
         atom='o'
         ion='iii'
         case1='B'
